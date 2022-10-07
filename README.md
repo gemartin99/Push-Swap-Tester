@@ -6,7 +6,9 @@
 
 ### 🔹 Todos los casos posibles de 2 a 5 numeros. Checkeo si queda ordenado y se hace en menos de los movimientos que se requieren.
 
-### 🔹 Test infinitos de 100 numeros y 500 donde te indica la eficiencia en movimentos.
+### 🔹 Tests infinitos de 100 numeros y 500 donde te indica la eficiencia en movimentos.
+
+### 🔹 Tests en caso de argumentos ya ordenados
 
 ## Uso
 
