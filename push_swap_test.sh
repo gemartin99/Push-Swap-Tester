@@ -2440,6 +2440,9 @@ res_3=0
 res_4=0
 res_5=0
 val=201
+media=0
+alta=0
+baja=2147483647
 if [ $1 > 0 ]; then
 	val=$1
 fi
@@ -2449,32 +2452,76 @@ while [ $cont -lt $val ]
 do
 ARG=$(ruby -e "puts (00..99).to_a.shuffle.join(' ')"); 
 S=$(./push_swap $ARG | ./checker_OS $ARG)
-if [ $S == "OK" ] && [ $cont != 1 ]; then
-	printf "${GREEN} [OK]${DEF_COLOR}\n";
-elif [ $cont != 1 ]; then
-	printf "${RED} [KO]${DEF_COLOR}\n";
-fi
+if [ $S == "OK" ]; then
+	printf "${GREEN}$cont .[OK]${DEF_COLOR}";
+else
+	printf "${RED}$cont .[KO]${DEF_COLOR}";
+fi 
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 700 ]; then
-	printf "${GREEN}$cont .[OK][5/5]${DEF_COLOR}";
+	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
+	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
+	if [ $N -gt $alta ]; then
+		alta=$(($N))
+	fi
+	if [ $N -lt $baja ]; then
+		baja=$(($N))
+	fi
+	media=$(($media+$N))
 	((res_1++))
 elif [ $N -gt 700 ] || [ $N -eq 700 ] && [ $N -lt 900 ]; then
-	printf "${YELLOW}$cont. [OK][4/5]${DEF_COLOR}";
+	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
+	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
+	if [ $N -gt $alta ]; then
+		alta=$(($N))
+	fi
+	if [ $N -lt $baja ]; then
+		baja=$(($N))
+	fi
+	media=$(($media+$N))
 	((res_2++))
 elif [ $N -gt 900 ] || [ $N -eq 900 ] && [ $N -lt 1100 ]; then
-	printf "${RED}$cont. [KO][3/5]${DEF_COLOR}";
+	printf "${RED}[KO][3/5]${DEF_COLOR}";
+	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
+	if [ $N -gt $alta ]; then
+		alta=$(($N))
+	fi
+	if [ $N -lt $baja ]; then
+		baja=$(($N))
+	fi
+	media=$(($media+$N))
 	((res_3++))
 elif [ $N -gt 1100 ] || [ $N -eq 1100 ] && [ $N -lt 1300 ]; then
-	printf "${RED}$cont. [KO][2/5]${DEF_COLOR}";
+	printf "${RED}[KO][2/5]${DEF_COLOR}\n";
+	printf "${CYAN} Moves:$N${DEF_COLOR}";
+	if [ $N -gt $alta ]; then
+		alta=$(($N))
+	fi
+	if [ $N -lt $baja ]; then
+		baja=$(($N))
+	fi
+	media=$(($media+$N))
 	((res_4++))
 elif [ $N -gt 1300 ] || [ $N -eq 1300 ]; then
-	printf "${RED}$cont. [KO][1/5]${DEF_COLOR}";
+	printf "${RED}[KO][1/5]${DEF_COLOR}";
+	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
+	if [ $N -gt $alta ]; then
+		alta=$(($N))
+	fi
+	if [ $N -lt $baja ]; then
+		baja=$(($N))
+	fi
+	media=$(($media+$N))
 	((res_5++))
 fi
 ((cont++))
 done
 
 ((val--))
+media=$(($media/$val))
+printf "${CYAN}\n\nMax: $alta${DEF_COLOR}\n"
+printf "${CYAN}Min: $baja${DEF_COLOR}\n"
+printf "${CYAN}Average: $media${DEF_COLOR}\n"
 printf	"${WHITE}\n\nTest ${DEF_COLOR}${GREEN}[5/5] ${WHITE}$res_1/$val"
 if [ $res_1 == $val ]; then
 	printf "${GREEN} Congrats , all tests have been completed successfully 🥳✅"
@@ -2502,6 +2549,9 @@ res_3=0
 res_4=0
 res_5=0
 val=201
+media=0
+alta=0
+baja=2147483647
 if [ $2 > 0 ]; then
 	val=$2
 fi
@@ -2509,34 +2559,78 @@ fi
 cont=1
 while [ $cont -lt $val ]
 do
-ARG=$(ruby -e "puts (-250..249).to_a.shuffle.join(' ')"); 
-N=$(./push_swap $ARG | wc -l)
-if [ $N -lt 5500 ]; then
-	printf "${GREEN}$cont .[OK][5/5]${DEF_COLOR}";
-	((res_1++))
-elif [ $N -gt 5500 ] || [ $N -eq 5500 ] && [ $N -lt 7000 ]; then
-	printf "${YELLOW}$cont. [OK][4/5]${DEF_COLOR}";
-	((res_2++))
-elif [ $N -gt 7000 ] || [ $N -eq 7000 ] && [ $N -lt 8500 ]; then
-	printf "${RED}$cont. [KO][3/5]${DEF_COLOR}";
-	((res_3++))
-elif [ $N -gt 8500 ] || [ $N -eq 8500 ] && [ $N -lt 10000 ]; then
-	printf "${RED}$cont. [KO][2/5]${DEF_COLOR}";
-	((res_4++))
-elif [ $N -gt 11500 ] || [ $N -eq 11500 ] ; then
-	printf "${RED}$cont. [KO][1/5]${DEF_COLOR}";
-	((res_5++))
-fi
+ARG=$(ruby -e "puts (-250..249).to_a.shuffle.join(' ')");
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
-	printf "${GREEN} [OK]${DEF_COLOR}\n";
+	printf "${GREEN}$cont .[OK]${DEF_COLOR}";
 else
-	printf "${RED} [KO]${DEF_COLOR}\n";
+	printf "${RED}$cont .[KO]${DEF_COLOR}";
+fi 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -lt 5500 ]; then
+	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
+	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
+	if [ $N -gt $alta ]; then
+		alta=$(($N))
+	fi
+	if [ $N -lt $baja ]; then
+		baja=$(($N))
+	fi
+	media=$(($media+$N))
+	((res_1++))
+elif [ $N -gt 5500 ] || [ $N -eq 5500 ] && [ $N -lt 7000 ]; then
+	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
+	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
+	if [ $N -gt $alta ]; then
+		alta=$(($N))
+	fi
+	if [ $N -lt $baja ]; then
+		baja=$(($N))
+	fi
+	media=$(($media+$N))
+	((res_2++))
+elif [ $N -gt 7000 ] || [ $N -eq 7000 ] && [ $N -lt 8500 ]; then
+	printf "${RED}[OK][3/5]${DEF_COLOR}";
+	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
+	if [ $N -gt $alta ]; then
+		alta=$(($N))
+	fi
+	if [ $N -lt $baja ]; then
+		baja=$(($N))
+	fi
+	media=$(($media+$N))
+	((res_3++))
+elif [ $N -gt 8500 ] || [ $N -eq 8500 ] && [ $N -lt 10000 ]; then
+	printf "${RED}[KO][2/5]${DEF_COLOR}";
+	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
+	if [ $N -gt $alta ]; then
+		alta=$(($N))
+	fi
+	if [ $N -lt $baja ]; then
+		baja=$(($N))
+	fi
+	media=$(($media+$N))
+	((res_4++))
+elif [ $N -gt 11500 ] || [ $N -eq 11500 ] ; then
+	printf "${RED}[KO][1/5]${DEF_COLOR}";
+	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
+	if [ $N -gt $alta ]; then
+		alta=$(($N))
+	fi
+	if [ $N -lt $baja ]; then
+		baja=$(($N))
+	fi
+	media=$(($media+$N))
+	((res_5++))
 fi
 ((cont++))
 done
 
 ((val--))
+media=$(($media/$val))
+printf "${CYAN}\n\nMax move: $alta${DEF_COLOR}\n"
+printf "${CYAN}Min move: $baja${DEF_COLOR}\n"
+printf "${CYAN}Average: $media${DEF_COLOR}\n"
 printf	"${WHITE}\n\nTest ${DEF_COLOR}${GREEN}[5/5] ${WHITE}$res_1/$val"
 if [ $res_1 == $val ]; then
 	printf "${GREEN} Congrats , all tests have been completed successfully 🥳✅"
