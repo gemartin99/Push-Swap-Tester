@@ -358,6 +358,8 @@ if [ $N -lt 4 ]; then
 	printf "${GREEN}1.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}1.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -372,6 +374,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}3.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}3.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -386,6 +390,8 @@ if [ $N -lt 4 ]; then
 	printf "${GREEN}5.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}5.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -400,6 +406,8 @@ if [ $N -lt 4 ]; then
 	printf "${GREEN}7.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}7.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -414,6 +422,8 @@ if [ $N -lt 4 ]; then
 	printf "${GREEN}9.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}9.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -428,6 +438,8 @@ if [ $N -lt 4 ]; then
 	printf "${GREEN}11.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}11.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -441,6 +453,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}13.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}13.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 
 S=$(./push_swap $ARG | ./checker_OS $ARG)
@@ -456,6 +470,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}15.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}15.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -470,6 +486,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}17.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}17.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -484,6 +502,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}19.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}19.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -498,6 +518,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}21.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}21.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -512,6 +534,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}23.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}23.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -526,6 +550,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}25.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}25.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -540,6 +566,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}27.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}27.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -554,6 +582,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}29.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}29.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -568,6 +598,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}31.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}31.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -582,6 +614,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}33.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}33.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -596,6 +630,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}35.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}35.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -610,6 +646,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}37.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}37.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -624,6 +662,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}39.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}39.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -638,6 +678,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}41.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}41.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -646,12 +688,30 @@ else
 	printf "${RED}42.[KO]${DEF_COLOR}";
 fi
 
+ARG="3 1 2 4"; 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -lt 13 ]; then
+	printf "${GREEN}43.[OK] ${DEF_COLOR}";
+else
+	printf "${RED}43.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
+fi
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+if [ $S == "OK" ]; then
+	printf "${GREEN}44.[OK] ${DEF_COLOR}";
+else
+	printf "${RED}44.[KO]${DEF_COLOR}";
+fi
+
 ARG="3 2 4 1"; 
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 13 ]; then
 	printf "${GREEN}45.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}45.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -666,6 +726,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}47.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}47.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -680,6 +742,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}49.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}49.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -694,6 +758,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}51.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}51.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -708,6 +774,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}53.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}53.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -722,6 +790,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}55.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}55.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -736,6 +806,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}57.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}57.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -750,6 +822,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}59.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}59.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -769,6 +843,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}1.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}1.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -783,6 +859,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}3.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}3.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -797,6 +875,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}5.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}5.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -811,6 +891,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}7.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}7.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -825,6 +907,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}9.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}9.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -839,6 +923,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}11.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}11.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -853,6 +939,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}13.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}13.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 
 S=$(./push_swap $ARG | ./checker_OS $ARG)
@@ -868,6 +956,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}15.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}15.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -882,6 +972,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}17.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}17.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -896,6 +988,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}19.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}19.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -910,6 +1004,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}21.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}21.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -924,6 +1020,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}23.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}23.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -938,6 +1036,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}25.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}25.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -952,6 +1052,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}27.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}27.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -966,6 +1068,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}29.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}29.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -980,6 +1084,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}31.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}31.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -994,6 +1100,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}33.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}33.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1008,6 +1116,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}35.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}35.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1022,6 +1132,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}37.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}37.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1036,6 +1148,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}39.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}39.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1050,6 +1164,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}41.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}41.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1058,12 +1174,30 @@ else
 	printf "${RED}42.[KO]${DEF_COLOR}";
 fi
 
+ARG="1 5 3 4 2"; 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -lt 13 ]; then
+	printf "${GREEN}43.[OK] ${DEF_COLOR}";
+else
+	printf "${RED}43.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
+fi
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+if [ $S == "OK" ]; then
+	printf "${GREEN}44.[OK] ${DEF_COLOR}";
+else
+	printf "${RED}44.[KO]${DEF_COLOR}";
+fi
+
 ARG="1 5 4 2 3";  
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 13 ]; then
 	printf "${GREEN}45.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}45.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1078,6 +1212,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}47.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}47.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1092,6 +1228,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}49.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}49.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1106,6 +1244,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}51.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}51.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1120,6 +1260,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}53.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}53.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1134,6 +1276,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}55.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}55.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1148,6 +1292,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}57.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}57.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1162,6 +1308,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}59.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}59.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1176,6 +1324,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}61.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}61.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1190,6 +1340,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}63.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}63.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1204,6 +1356,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}65.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}65.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1218,6 +1372,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}67.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}67.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1232,6 +1388,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}69.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}69.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1246,6 +1404,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}71.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}71.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1260,6 +1420,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}73.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}73.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1274,6 +1436,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}75.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}75.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1288,6 +1452,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}77.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}77.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1302,6 +1468,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}79.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}79.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1316,6 +1484,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}81.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}81.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1330,6 +1500,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}83.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}83.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1344,6 +1516,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}85.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}85.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1358,6 +1532,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}87.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}87.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1372,6 +1548,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}89.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}89.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1386,6 +1564,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}91.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}91.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1400,6 +1580,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}93.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}93.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1414,6 +1596,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}95.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}95.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1428,6 +1612,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}97.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}97.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1442,6 +1628,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}99.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}99.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1456,6 +1644,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}101.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}101.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1470,6 +1660,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}103.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}103.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1484,6 +1676,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}105.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}105.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1498,6 +1692,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}107.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}107.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1512,6 +1708,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}109.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}109.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1526,6 +1724,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}111.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}111.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1540,6 +1740,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}113.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}113.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1554,6 +1756,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}115.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}115.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1568,6 +1772,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}117.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}117.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1582,6 +1788,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}119.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}119.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1596,6 +1804,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}121.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}121.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1610,6 +1820,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}123.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}123.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1624,6 +1836,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}125.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}125.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1638,6 +1852,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}127.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}127.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1652,6 +1868,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}129.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}129.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1666,6 +1884,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}131.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}131.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1680,6 +1900,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}133.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}133.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1694,6 +1916,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}135.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}135.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1708,6 +1932,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}137.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}137.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1722,6 +1948,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}139.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}139.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1736,6 +1964,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}141.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}141.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1750,6 +1980,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}143.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}143.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1764,6 +1996,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}145.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}145.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1778,6 +2012,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}147.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}147.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1792,6 +2028,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}149.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}149.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1806,6 +2044,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}151.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}151.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1820,6 +2060,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}153.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}153.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1834,6 +2076,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}155.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}155.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1848,6 +2092,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}157.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}157.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1862,6 +2108,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}159.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}159.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1876,6 +2124,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}161.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}161.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1890,6 +2140,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}163.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}163.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1904,6 +2156,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}165.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}165.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1918,6 +2172,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}167.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}167.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1932,6 +2188,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}169.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}169.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1946,6 +2204,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}171.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}171.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1960,6 +2220,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}173.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}173.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1974,6 +2236,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}175.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}175.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -1988,6 +2252,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}177.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}177.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2002,6 +2268,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}179.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}179.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2016,6 +2284,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}181.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}181.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2030,6 +2300,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}183.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}183.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2044,6 +2316,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}185.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}185.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2058,6 +2332,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}187.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}187.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2072,6 +2348,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}189.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}189.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2086,6 +2364,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}191.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}191.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2100,6 +2380,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}193.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}193.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2114,6 +2396,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}195.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}195.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2128,6 +2412,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}197.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}197.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2142,6 +2428,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}199.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}199.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2156,6 +2444,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}201.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}201.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2170,6 +2460,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}203.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}203.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2184,6 +2476,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}205.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}205.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2198,6 +2492,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}207.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}207.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2212,6 +2508,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}209.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}209.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2226,6 +2524,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}211.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}211.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2240,6 +2540,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}213.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}213.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2254,6 +2556,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}215.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}215.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2268,6 +2572,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}217.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}217.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2282,6 +2588,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}219.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}219.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2296,6 +2604,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}221.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}221.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2310,6 +2620,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}223.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}223.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2324,6 +2636,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}225.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}225.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2338,6 +2652,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}227.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}227.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2352,6 +2668,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}229.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}229.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2366,6 +2684,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}231.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}231.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2380,6 +2700,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}233.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}233.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2394,6 +2716,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}235.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}235.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2408,6 +2732,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}237.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}237.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2422,6 +2748,8 @@ if [ $N -lt 13 ]; then
 	printf "${GREEN}239.[OK] ${DEF_COLOR}";
 else
 	printf "${RED}239.[KO]${DEF_COLOR}";
+	printf "${WHITE} TEST: ";
+	echo -n "$ARG "
 fi
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
@@ -2649,6 +2977,98 @@ printf	"${WHITE}\nTest ${DEF_COLOR}${RED}[1/5] ${WHITE}$res_5/$val\n"
 fi
 
 printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
+printf ${BLUE}"\n\t\t  Order nums\t\t\n"${DEF_COLOR};
+printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
+
+ARG=""; 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -eq 0 ]; then
+	printf "${GREEN}1. [OK]${DEF_COLOR}\n";
+else
+	printf "${RED}1. [KO]${DEF_COLOR}\n";
+fi
+
+ARG="1 2 3 4 5 6 7 8 9"; 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -eq 0 ]; then
+	printf "${GREEN}2. [OK]${DEF_COLOR}\n";
+else
+	printf "${RED}2. [KO]${DEF_COLOR}\n";
+fi
+
+ARG="1 2 3"; 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -eq 0 ]; then
+	printf "${GREEN}3. [OK]${DEF_COLOR}\n";
+else
+	printf "${RED}3. [KO]${DEF_COLOR}\n";
+fi
+
+ARG="1"; 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -eq 0 ]; then
+	printf "${GREEN}4. [OK]${DEF_COLOR}\n";
+else
+	printf "${RED}4. [KO]${DEF_COLOR}\n";
+fi
+
+ARG="1 2"; 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -eq 0 ]; then
+	printf "${GREEN}5. [OK]${DEF_COLOR}\n";
+else
+	printf "${RED}6. [KO]${DEF_COLOR}\n";
+fi
+
+ARG="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"; 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -eq 0 ]; then
+	printf "${GREEN}7. [OK]${DEF_COLOR}\n";
+else
+	printf "${RED}7. [KO]${DEF_COLOR}\n";
+fi
+
+ARG="6 7 8"; 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -eq 0 ]; then
+	printf "${GREEN}8. [OK]${DEF_COLOR}\n";
+else
+	printf "${RED}8. [KO]${DEF_COLOR}\n";
+fi
+
+ARG="2147483645 2147483646 2147483647"; 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -eq 0 ]; then
+	printf "${GREEN}9. [OK]${DEF_COLOR}\n";
+else
+	printf "${RED}9. [KO]${DEF_COLOR}\n";
+fi
+
+ARG="-2147483648 -2147483647 -2147483646"; 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -eq 0 ]; then
+	printf "${GREEN}10. [OK]${DEF_COLOR}\n";
+else
+	printf "${RED}10. [KO]${DEF_COLOR}\n";
+fi
+
+ARG="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50"; 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -eq 0 ]; then
+	printf "${GREEN}11. [OK]${DEF_COLOR}\n";
+else
+	printf "${RED}11. [KO]${DEF_COLOR}\n";
+fi
+
+ARG="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77"; 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -eq 0 ]; then
+	printf "${GREEN}12. [OK]${DEF_COLOR}\n";
+else
+	printf "${RED}12. [KO]${DEF_COLOR}\n";
+fi
+
+printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 printf ${BLUE}"\n\t\t  Random test with big nums\t\t\n"${DEF_COLOR};
 printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 
@@ -2852,94 +3272,142 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
-printf ${BLUE}"\n\t\t  Order nums\t\t\n"${DEF_COLOR};
-printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
-
-ARG=""; 
+ARG=$(ruby -e "puts (0..450).to_a.shuffle.join(' ')");
 N=$(./push_swap $ARG | wc -l)
-if [ $N -eq 0 ]; then
-	printf "${GREEN}1. [OK]${DEF_COLOR}\n";
+if [ $N -lt 5500 ]; then
+	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
+elif [ $N -gt 5500 ] && [ $N -lt 7000 ]; then
+	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
+elif [ $N -gt 7000 ] && [ $N -lt 8500 ]; then
+	printf "${RED}[KO][3/5]${DEF_COLOR}";
+elif [ $N -gt 8500 ] && [ $N -lt 10000 ]; then
+	printf "${RED}[KO][2/5]${DEF_COLOR}";
+elif [ $N -gt 11500 ]; then
+	printf "${RED}[KO][1/5]${DEF_COLOR}";
+fi
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+if [ $S == "OK" ]; then
+	printf "${GREEN} [OK]${DEF_COLOR}\n";
 else
-	printf "${RED}1. [KO]${DEF_COLOR}\n";
+	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG="1 2 3 4 5 6 7 8 9"; 
+ARG=$(ruby -e "puts (250..720).to_a.shuffle.join(' ')");
 N=$(./push_swap $ARG | wc -l)
-if [ $N -eq 0 ]; then
-	printf "${GREEN}2. [OK]${DEF_COLOR}\n";
+if [ $N -lt 5500 ]; then
+	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
+elif [ $N -gt 5500 ] && [ $N -lt 7000 ]; then
+	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
+elif [ $N -gt 7000 ] && [ $N -lt 8500 ]; then
+	printf "${RED}[KO][3/5]${DEF_COLOR}";
+elif [ $N -gt 8500 ] && [ $N -lt 10000 ]; then
+	printf "${RED}[KO][2/5]${DEF_COLOR}";
+elif [ $N -gt 11500 ]; then
+	printf "${RED}[KO][1/5]${DEF_COLOR}";
+fi
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+if [ $S == "OK" ]; then
+	printf "${GREEN} [OK]${DEF_COLOR}\n";
 else
-	printf "${RED}2. [KO]${DEF_COLOR}\n";
+	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG="1 2 3"; 
+ARG=$(ruby -e "puts (10000..10460).to_a.shuffle.join(' ')");
 N=$(./push_swap $ARG | wc -l)
-if [ $N -eq 0 ]; then
-	printf "${GREEN}3. [OK]${DEF_COLOR}\n";
+if [ $N -lt 5500 ]; then
+	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
+elif [ $N -gt 5500 ] && [ $N -lt 7000 ]; then
+	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
+elif [ $N -gt 7000 ] && [ $N -lt 8500 ]; then
+	printf "${RED}[KO][3/5]${DEF_COLOR}";
+elif [ $N -gt 8500 ] && [ $N -lt 10000 ]; then
+	printf "${RED}[KO][2/5]${DEF_COLOR}";
+elif [ $N -gt 11500 ]; then
+	printf "${RED}[KO][1/5]${DEF_COLOR}";
+fi
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+if [ $S == "OK" ]; then
+	printf "${GREEN} [OK]${DEF_COLOR}\n";
 else
-	printf "${RED}3. [KO]${DEF_COLOR}\n";
+	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG="1"; 
+ARG=$(ruby -e "puts (100..250).to_a.shuffle.join(' ')");
 N=$(./push_swap $ARG | wc -l)
-if [ $N -eq 0 ]; then
-	printf "${GREEN}4. [OK]${DEF_COLOR}\n";
+if [ $N -lt 5500 ]; then
+	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
+elif [ $N -gt 5500 ] && [ $N -lt 7000 ]; then
+	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
+elif [ $N -gt 7000 ] && [ $N -lt 8500 ]; then
+	printf "${RED}[KO][3/5]${DEF_COLOR}";
+elif [ $N -gt 8500 ] && [ $N -lt 10000 ]; then
+	printf "${RED}[KO][2/5]${DEF_COLOR}";
+elif [ $N -gt 11500 ]; then
+	printf "${RED}[KO][1/5]${DEF_COLOR}";
+fi
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+if [ $S == "OK" ]; then
+	printf "${GREEN} [OK]${DEF_COLOR}\n";
 else
-	printf "${RED}4. [KO]${DEF_COLOR}\n";
+	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG="1 2"; 
+ARG=$(ruby -e "puts (90000..90460).to_a.shuffle.join(' ')");
 N=$(./push_swap $ARG | wc -l)
-if [ $N -eq 0 ]; then
-	printf "${GREEN}5. [OK]${DEF_COLOR}\n";
+if [ $N -lt 5500 ]; then
+	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
+elif [ $N -gt 5500 ] && [ $N -lt 7000 ]; then
+	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
+elif [ $N -gt 7000 ] && [ $N -lt 8500 ]; then
+	printf "${RED}[KO][3/5]${DEF_COLOR}";
+elif [ $N -gt 8500 ] && [ $N -lt 10000 ]; then
+	printf "${RED}[KO][2/5]${DEF_COLOR}";
+elif [ $N -gt 11500 ]; then
+	printf "${RED}[KO][1/5]${DEF_COLOR}";
+fi
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+if [ $S == "OK" ]; then
+	printf "${GREEN} [OK]${DEF_COLOR}\n";
 else
-	printf "${RED}6. [KO]${DEF_COLOR}\n";
+	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"; 
+ARG=$(ruby -e "puts (-500..-9).to_a.shuffle.join(' ')");
 N=$(./push_swap $ARG | wc -l)
-if [ $N -eq 0 ]; then
-	printf "${GREEN}7. [OK]${DEF_COLOR}\n";
+if [ $N -lt 5500 ]; then
+	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
+elif [ $N -gt 5500 ] && [ $N -lt 7000 ]; then
+	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
+elif [ $N -gt 7000 ] && [ $N -lt 8500 ]; then
+	printf "${RED}[KO][3/5]${DEF_COLOR}";
+elif [ $N -gt 8500 ] && [ $N -lt 10000 ]; then
+	printf "${RED}[KO][2/5]${DEF_COLOR}";
+elif [ $N -gt 11500 ]; then
+	printf "${RED}[KO][1/5]${DEF_COLOR}";
+fi
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+if [ $S == "OK" ]; then
+	printf "${GREEN} [OK]${DEF_COLOR}\n";
 else
-	printf "${RED}7. [KO]${DEF_COLOR}\n";
+	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG="6 7 8"; 
+ARG=$(ruby -e "puts (-50000..-49510).to_a.shuffle.join(' ')");
 N=$(./push_swap $ARG | wc -l)
-if [ $N -eq 0 ]; then
-	printf "${GREEN}8. [OK]${DEF_COLOR}\n";
-else
-	printf "${RED}8. [KO]${DEF_COLOR}\n";
+if [ $N -lt 5500 ]; then
+	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
+elif [ $N -gt 5500 ] && [ $N -lt 7000 ]; then
+	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
+elif [ $N -gt 7000 ] && [ $N -lt 8500 ]; then
+	printf "${RED}[KO][3/5]${DEF_COLOR}";
+elif [ $N -gt 8500 ] && [ $N -lt 10000 ]; then
+	printf "${RED}[KO][2/5]${DEF_COLOR}";
+elif [ $N -gt 11500 ]; then
+	printf "${RED}[KO][1/5]${DEF_COLOR}";
 fi
-
-ARG="2147483645 2147483646 2147483647"; 
-N=$(./push_swap $ARG | wc -l)
-if [ $N -eq 0 ]; then
-	printf "${GREEN}9. [OK]${DEF_COLOR}\n";
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+if [ $S == "OK" ]; then
+	printf "${GREEN} [OK]${DEF_COLOR}\n";
 else
-	printf "${RED}9. [KO]${DEF_COLOR}\n";
-fi
-
-ARG="-2147483648 -2147483647 -2147483646"; 
-N=$(./push_swap $ARG | wc -l)
-if [ $N -eq 0 ]; then
-	printf "${GREEN}10. [OK]${DEF_COLOR}\n";
-else
-	printf "${RED}10. [KO]${DEF_COLOR}\n";
-fi
-
-ARG="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50"; 
-N=$(./push_swap $ARG | wc -l)
-if [ $N -eq 0 ]; then
-	printf "${GREEN}11. [OK]${DEF_COLOR}\n";
-else
-	printf "${RED}11. [KO]${DEF_COLOR}\n";
-fi
-
-ARG="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77"; 
-N=$(./push_swap $ARG | wc -l)
-if [ $N -eq 0 ]; then
-	printf "${GREEN}12. [OK]${DEF_COLOR}\n";
-else
-	printf "${RED}12. [KO]${DEF_COLOR}\n";
+	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
