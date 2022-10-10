@@ -26,11 +26,11 @@ Tambien podemos añadir dos argumentos que sera la cantidad de veces que ejecuta
 
 <img width="540" alt="Screen Shot 2022-10-09 at 11 06 42 PM" src="https://user-images.githubusercontent.com/66915274/194779534-cf66c958-46a4-4c6f-bf2f-587af4ad8f8e.png">
 
-Si tienes el programa checker (bonus) se ejecutara automaticamente los test del bonus. Si quieres ejecutar solo el bonus:
+Si quieres ejecutar el bonus:
 
 ```bash push_swap_test.sh -b```.
 
-Si quieres ejecutar solo el bonus y definir la cantidad de test de size100 y size500 que se ejecutaran:
+Si quieres ejecutar el bonus y definir la cantidad de test de size100 y size500:
 
 ```bash push_swap_test.sh -b 100 100```
 
