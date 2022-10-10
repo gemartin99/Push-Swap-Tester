@@ -22,7 +22,7 @@ rm -rf traces.txt
 
 # -=-=-=-=-	Control errors -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
-if [ $1 != -b ] && [ !$1 ]; then
+if [ $1 != -b ] || [ -z "$1" ]; then
 
 printf ${BLUE}"\n-------------------------------------------------------------\n"${DEF_COLOR};
 printf ${BLUE}"\n\t\t\tCONTROL ERRORS\t\n"${DEF_COLOR};
