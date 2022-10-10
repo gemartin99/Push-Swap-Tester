@@ -12,6 +12,8 @@
 
 ### 🔹 Indicador de promedio de movimientos.
 
+### 🔹 Checkeo del bonus.
+
 ## Uso
 
 El fichero push_swap_test.sh y el checker_OS se deben ubicar en el mismo directorio donde este el programa push_swap. Una vez abramos el terminal y estemos ubicados en ese directorio ejecutaremos el comando: 
@@ -23,6 +25,18 @@ Tambien podemos añadir dos argumentos que sera la cantidad de veces que ejecuta
 ```bash push_swap_test.sh 250 250```. 
 
 <img width="540" alt="Screen Shot 2022-10-09 at 11 06 42 PM" src="https://user-images.githubusercontent.com/66915274/194779534-cf66c958-46a4-4c6f-bf2f-587af4ad8f8e.png">
+
+Si tienes el programa checker (bonus) se ejecutara automaticamente los test del bonus. Si quieres ejecutar solo el bonus:
+
+```bash push_swap_test.sh -b```.
+
+Si quieres ejecutar solo el bonus y definir la cantidad de test de size100 y size500 que se ejecutaran:
+
+```bash push_swap_test.sh -b 100 100```
+
+<img width="448" alt="Screen Shot 2022-10-10 at 3 12 48 AM" src="https://user-images.githubusercontent.com/66915274/194788176-19454b9d-61b7-4921-b440-1073c3d22c50.png">
+
+### ❗️ Si falla un test y quieres ver el argumento que ha sido mandado al programa visualiza el fichero traces.txt ❗️
 
 # Espero que te sea útil! 😁
 
