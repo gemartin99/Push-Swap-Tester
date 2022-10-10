@@ -2814,6 +2814,7 @@ if [ $N -lt 700 ]; then
 	((res_1++))
 elif [ $N -gt 700 ] || [ $N -eq 700 ] && [ $N -lt 900 ]; then
 	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
+	echo TEST $cont ARG:"$ARG" >> traces.txt
 	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
 	if [ $N -gt $alta ]; then
 		alta=$(($N))
@@ -2825,6 +2826,7 @@ elif [ $N -gt 700 ] || [ $N -eq 700 ] && [ $N -lt 900 ]; then
 	((res_2++))
 elif [ $N -gt 900 ] || [ $N -eq 900 ] && [ $N -lt 1100 ]; then
 	printf "${RED}[KO][3/5]${DEF_COLOR}";
+	echo TEST $cont ARG:"$ARG" >> traces.txt
 	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
 	if [ $N -gt $alta ]; then
 		alta=$(($N))
@@ -2836,6 +2838,7 @@ elif [ $N -gt 900 ] || [ $N -eq 900 ] && [ $N -lt 1100 ]; then
 	((res_3++))
 elif [ $N -gt 1100 ] || [ $N -eq 1100 ] && [ $N -lt 1300 ]; then
 	printf "${RED}[KO][2/5]${DEF_COLOR}\n";
+	echo TEST $cont ARG:"$ARG" >> traces.txt
 	printf "${CYAN} Moves:$N${DEF_COLOR}";
 	if [ $N -gt $alta ]; then
 		alta=$(($N))
@@ -2847,6 +2850,7 @@ elif [ $N -gt 1100 ] || [ $N -eq 1100 ] && [ $N -lt 1300 ]; then
 	((res_4++))
 elif [ $N -gt 1300 ] || [ $N -eq 1300 ]; then
 	printf "${RED}[KO][1/5]${DEF_COLOR}";
+	echo TEST $cont ARG:"$ARG" >> traces.txt
 	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
 	if [ $N -gt $alta ]; then
 		alta=$(($N))
@@ -2933,6 +2937,7 @@ if [ $N -gt 5500 ] || [ $N -eq 5500 ]; then
 fi
 elif [ $N -gt 5500 ] || [ $N -eq 5500 ] && [ $N -lt 7000 ]; then
 	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
+	echo TEST $cont ARG:"$ARG" >> traces.txt
 	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
 	if [ $N -gt $alta ]; then
 		alta=$(($N))
@@ -2944,6 +2949,7 @@ elif [ $N -gt 5500 ] || [ $N -eq 5500 ] && [ $N -lt 7000 ]; then
 	((res_2++))
 elif [ $N -gt 7000 ] || [ $N -eq 7000 ] && [ $N -lt 8500 ]; then
 	printf "${RED}[OK][3/5]${DEF_COLOR}";
+	echo TEST $cont ARG:"$ARG" >> traces.txt
 	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
 	if [ $N -gt $alta ]; then
 		alta=$(($N))
@@ -2955,6 +2961,7 @@ elif [ $N -gt 7000 ] || [ $N -eq 7000 ] && [ $N -lt 8500 ]; then
 	((res_3++))
 elif [ $N -gt 8500 ] || [ $N -eq 8500 ] && [ $N -lt 10000 ]; then
 	printf "${RED}[KO][2/5]${DEF_COLOR}";
+	echo TEST $cont ARG:"$ARG" >> traces.txt
 	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
 	if [ $N -gt $alta ]; then
 		alta=$(($N))
@@ -2966,6 +2973,7 @@ elif [ $N -gt 8500 ] || [ $N -eq 8500 ] && [ $N -lt 10000 ]; then
 	((res_4++))
 elif [ $N -gt 11500 ] || [ $N -eq 11500 ] ; then
 	printf "${RED}[KO][1/5]${DEF_COLOR}";
+	echo TEST $cont ARG:"$ARG" >> traces.txt
 	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
 	if [ $N -gt $alta ]; then
 		alta=$(($N))
@@ -4122,3 +4130,5 @@ printf "${CYAN}\nCheck traces $PWD/traces.txt\n"
 fi
 
 fi
+
+rm -rf 0
