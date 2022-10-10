@@ -3968,7 +3968,7 @@ echo BONUS-Multible size '<'= 100 >> traces.txt
 
 val=101
 
-if [ $1 ]; then
+if [ $1 ] && [ $1 != -b ]; then
 	val=$(($1+1))
 fi
 if [ $1 == -b ] && [ $2 ]; then
