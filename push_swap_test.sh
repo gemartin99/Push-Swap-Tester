@@ -22,8 +22,6 @@ rm -rf traces.txt
 
 # -=-=-=-=-	Control errors -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
-if [ $1 != -b ]; then
-
 printf ${BLUE}"\n-------------------------------------------------------------\n"${DEF_COLOR};
 printf ${BLUE}"\n\t\t\tCONTROL ERRORS\t\n"${DEF_COLOR};
 printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
@@ -3433,12 +3431,8 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-fi
+if [ $1 == -b ]; then
 
-RUTA=$PWD
-FILE=/Makefile
-EXIST=$RUTA$FILE
-if test -f "$EXIST"; then
 printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 printf ${MAGENTA}"\n\t\t\t  BONUS\t\t\n"${DEF_COLOR};
 printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
@@ -4006,11 +4000,6 @@ printf	"${RED}\nKO${WHITE} TESTS $res_2/$val${DEF_COLOR}\n"
 printf "${CYAN}\nCheck traces $PWD/traces.txt${DEF_COLOR}\n"
 fi
 
-else
-	echo
-
-fi
-
 printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 printf ${MAGENTA}"\n\t\t  Multiple size <= 500\t\t\n"${DEF_COLOR};
 printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
@@ -4117,4 +4106,6 @@ if [ $res_2 != 0 ]; then
 printf	"${GREEN}\nOK${WHITE} TESTS $res_1/$cont\n"
 printf	"${RED}\nKO${WHITE} TESTS $res_2/$cont\n"
 printf "${CYAN}\nCheck traces $PWD/traces.txt\n"
+fi
+
 fi
