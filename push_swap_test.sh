@@ -18,7 +18,11 @@ printf ${YELLOW}"\n\t\tTEST CREATED BY: "${DEF_COLOR};
 printf ${CYAN}"GEMARTIN\t\n"${DEF_COLOR};
 printf ${BLUE}"\n-------------------------------------------------------------\n"${DEF_COLOR};
 
+rm -rf traces.txt
+
 # -=-=-=-=-	Control errors -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
+
+if [ $1 != -b ]; then
 
 printf ${BLUE}"\n-------------------------------------------------------------\n"${DEF_COLOR};
 printf ${BLUE}"\n\t\t\tCONTROL ERRORS\t\n"${DEF_COLOR};
@@ -343,12 +347,10 @@ do
   fi
 done < test_check.txt
 
-printf ${BLUE}"\n-------------------------------------------------------------\n"${DEF_COLOR};
-
-
 
 # -=-=-=-=-	Basic -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
+printf ${BLUE}"\n-------------------------------------------------------------\n"${DEF_COLOR};
 printf ${BLUE}"\n\t\t\tBasic input\t\t\n"${DEF_COLOR};
 printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 
@@ -2762,6 +2764,8 @@ printf ${BLUE}"\n-------------------------------------------------------------\n
 printf ${BLUE}"\n\t\t  Multible size <= 100\t\t\n"${DEF_COLOR};
 printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 
+echo Multible size '<'= 100 >> traces.txt
+
 res_1=0
 res_2=0
 res_3=0
@@ -2786,6 +2790,9 @@ else
 	printf "${RED}$cont .[KO]${DEF_COLOR}";
 fi 
 N=$(./push_swap $ARG | wc -l)
+if [ $N -gt 700 ] || [ $N -eq 700 ]; then
+	echo TEST $cont ARG:"$ARG" >> traces.txt
+fi
 if [ $N -lt 700 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
 	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
@@ -2853,6 +2860,7 @@ printf "${CYAN}Average: $media${DEF_COLOR}\n"
 printf	"${WHITE}\n\nTest ${DEF_COLOR}${GREEN}[5/5] ${WHITE}$res_1/$val"
 if [ $res_1 == $val ]; then
 	printf "${GREEN} Congrats , all tests have been completed successfully 🥳✅"
+	echo OK >> traces.txt
 fi
 if [ $res_2 != 0 ]; then
 printf	"${WHITE}\nTest ${DEF_COLOR}${YELLOW}[4/5] ${WHITE}$res_2/$val"
@@ -2866,10 +2874,15 @@ fi
 if [ $res_5 != 0 ]; then
 printf	"${WHITE}\nTest ${DEF_COLOR}${RED}[1/5] ${WHITE}$res_5/$val\n"
 fi
+if [ $res_1  != $val ]; then
+	printf "${CYAN}\nCheck traces $PWD/traces.txt\n"
+fi
 
 printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 printf ${BLUE}"\n\t\t  Multiple size <= 500\t\t\n"${DEF_COLOR};
 printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
+
+echo Multible size '<'= 500 >> traces.txt
 
 res_1=0
 res_2=0
@@ -2906,6 +2919,10 @@ if [ $N -lt 5500 ]; then
 	fi
 	media=$(($media+$N))
 	((res_1++))
+if [ $N -gt 5500 ] || [ $N -eq 5500 ]; then
+	echo entro aqui
+	echo TEST $cont ARG:"$ARG" >> traces.txt
+fi
 elif [ $N -gt 5500 ] || [ $N -eq 5500 ] && [ $N -lt 7000 ]; then
 	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
 	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
@@ -2962,6 +2979,7 @@ printf "${CYAN}Average: $media${DEF_COLOR}\n"
 printf	"${WHITE}\n\nTest ${DEF_COLOR}${GREEN}[5/5] ${WHITE}$res_1/$val"
 if [ $res_1 == $val ]; then
 	printf "${GREEN} Congrats , all tests have been completed successfully 🥳✅"
+	echo OK >> traces.txt
 fi
 if [ $res_2 != 0 ]; then
 printf	"${WHITE}\nTest ${DEF_COLOR}${YELLOW}[4/5] ${WHITE}$res_2/$val"
@@ -2974,6 +2992,9 @@ printf	"${WHITE}\nTest ${DEF_COLOR}${RED}[2/5] ${WHITE}$res_4/$val"
 fi
 if [ $res_5 != 0 ]; then
 printf	"${WHITE}\nTest ${DEF_COLOR}${RED}[1/5] ${WHITE}$res_5/$val\n"
+fi
+if [ $res_1  != $val ]; then
+	printf "${CYAN}\nCheck traces $PWD/traces.txt\n"
 fi
 
 printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
@@ -3410,4 +3431,690 @@ if [ $S == "OK" ]; then
 	printf "${GREEN} [OK]${DEF_COLOR}\n";
 else
 	printf "${RED} [KO]${DEF_COLOR}\n";
+fi
+
+fi
+
+RUTA=$PWD
+FILE=/Makefile
+EXIST=$RUTA$FILE
+if test -f "$EXIST"; then
+printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
+printf ${MAGENTA}"\n\t\t\t  BONUS\t\t\n"${DEF_COLOR};
+printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
+
+printf ${MAGENTA}"\n-------------------------------------------------------------\n"${DEF_COLOR};
+printf ${MAGENTA}"\n\t\t\tCONTROL ERRORS\t\n"${DEF_COLOR};
+printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
+
+./checker "a" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}1.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}1.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "111a11" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}2.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}2.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "hello world" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}3.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}3.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}4.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}4.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "0 0" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}5.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}5.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "-1 +1" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}6.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}6.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "111-1 2 -3" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}7.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}7.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "-3 -2 -2" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}8.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}8.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "\n" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}9.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}9.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "-2147483649" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}10.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}10.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "-2147483650" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}11.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}11.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "2147483648" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}12.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}12.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "8 "9 1" 12" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}13.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}13.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "10 -1 -2 -3 -4 -5 -6 90 99 10" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}14.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}14.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "1 +1 -1" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}15.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}15.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "3333-3333 1 4" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}16.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}16.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "111+111 -4 3" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}16.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}16.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "111a111 -4 3" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}17.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}17.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "111111 "-4 3"" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}18.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}18.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "2147483649" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}19.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}19.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "2147483647+1" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}20.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}20.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "0 1 2 3 4 5 0" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}21.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}21.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "3 +3" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}22.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}22.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "3+3" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}23.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}23.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "42 42" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}24.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}24.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "42 " -42" " 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}25.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}25.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "4222-4222" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}26.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}26.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "99999999999999999999999999" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}27.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}27.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+./checker "-99999999999999999999999999" 2> test_check.txt
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}28.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}28.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+
+# Checkear nombres de funciones diferentes
+
+printf ${MAGENTA}"\n-------------------------------------------------------------\n"${DEF_COLOR};
+printf ${MAGENTA}"\n\t\t\tBasic Input\t\t\n"${DEF_COLOR};
+printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
+
+ARG="2 1"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}1.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}1.[KO]${DEF_COLOR}\n";
+fi
+
+ARG="2 1 3"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}2.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}2.[KO]${DEF_COLOR}\n";
+fi
+
+ARG="1 3 2"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}3.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}3.[KO]${DEF_COLOR}\n";
+fi
+
+ARG="2 3 1"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}4.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}4.[KO]${DEF_COLOR}\n";
+fi
+
+ARG="3 2 1"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}5.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}5.[KO]${DEF_COLOR}\n";
+fi
+
+ARG="3 1 2"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}6.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}6.[KO]${DEF_COLOR}\n";
+fi
+
+
+ARG="4 3 2 1"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}7.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}7.[KO]${DEF_COLOR}\n";
+fi
+
+ARG="4 2 1 3"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}8.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}8.[KO]${DEF_COLOR}\n";
+fi
+
+ARG="4 3 1 2"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}9.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}9.[KO]${DEF_COLOR}\n";
+fi
+
+ARG="3 2 1 4"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}10.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}10.[KO]${DEF_COLOR}\n";
+fi
+
+printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
+printf ${MAGENTA}"\n\t\t\tSize 5\t\t\n"${DEF_COLOR};
+printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
+
+ARG="2 1 3 4 5"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}1.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}1.[KO]${DEF_COLOR}\n";
+fi
+
+ARG="5 4 3 2 1"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}2.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}2.[KO]${DEF_COLOR}\n";
+fi
+
+ARG="5 4 1 2 3"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}3.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}3.[KO]${DEF_COLOR}\n";
+fi
+
+ARG="5 4 3 1 2"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}4.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}4.[KO]${DEF_COLOR}\n";
+fi
+
+ARG="4 5 3 1 2"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}5.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}5.[KO]${DEF_COLOR}\n";
+fi
+
+ARG="3 2 1 5 4"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}6.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}6.[KO]${DEF_COLOR}\n";
+fi
+
+
+ARG="1 2 3 5 4"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}7.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}7.[KO]${DEF_COLOR}\n";
+fi
+
+ARG="2 1 4 5 3"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}8.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}8.[KO]${DEF_COLOR}\n";
+fi
+
+ARG="1 3 2 5 4"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}9.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}9.[KO]${DEF_COLOR}\n";
+fi
+
+ARG="2 3 4 5 1"; 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}10.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}10.[KO]${DEF_COLOR}\n";
+fi
+
+
+
+printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
+printf ${MAGENTA}"\n\t\t  Multible size <= 100\t\t\n"${DEF_COLOR};
+printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
+
+echo BONUS-Multible size '<'= 100 >> traces.txt
+
+val=101
+
+if [ $1 ]; then
+	val=$(($1+1))
+fi
+if [ $1 == -b ] && [ $2 ]; then
+	val=$(($2+1))
+fi
+res_1=0
+res_2=0
+cont=1
+while [ $cont -lt $val ]
+do
+ARG=$(ruby -e "puts (00..99).to_a.shuffle.join(' ')"); 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}$cont .[OK] ${DEF_COLOR}";
+	((res_1++))
+else
+	printf "${RED}$cont .[KO] ${DEF_COLOR}";
+	echo TEST $cont ARG:"$ARG" >> traces.txt
+	((res_2++))
+fi
+((cont++))
+done
+
+echo
+
+((val--))
+if [ $res_1 == $val ]; then
+	printf "${GREEN}\nCongrats , all tests have been completed successfully 🥳✅\n"
+	echo OK >> traces.txt
+fi
+if [ $res_2 != 0 ]; then
+printf	"${GREEN}\nOK${WHITE} TESTS $res_1/$val${DEF_COLOR}\n"
+printf	"${RED}\nKO${WHITE} TESTS $res_2/$val${DEF_COLOR}\n"
+printf "${CYAN}\nCheck traces $PWD/traces.txt${DEF_COLOR}\n"
+fi
+
+else
+	echo
+
+fi
+
+printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
+printf ${MAGENTA}"\n\t\t  Multible size <= 500\t\t\n"${DEF_COLOR};
+printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
+
+echo BONUS-Multible size '<'= 500 >> traces.txt
+
+val=101
+
+if [ $2 ]; then
+	val=$(($2+1))
+fi
+if [ $1 == -b ] && [ $2 ]; then
+	val=$(($3+1))
+fi
+
+res_1=0
+res_2=0
+cont=1
+while [ $cont -lt $val ]
+do
+ARG=$(ruby -e "puts (00..499).to_a.shuffle.join(' ')"); 
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}$cont .[OK] ${DEF_COLOR}";
+	((res_1++))
+else
+	printf "${RED}$cont .[KO] ${DEF_COLOR}";
+	echo TEST $cont ARG:"$ARG" >> traces.txt
+	((res_2++))
+fi
+((cont++))
+done
+
+echo
+
+((val--))
+if [ $res_1 == $val ]; then
+	printf "${GREEN}\nCongrats , all tests have been completed successfully 🥳✅\n"
+	echo OK >> traces.txt
+fi
+if [ $res_2 != 0 ]; then
+printf	"${GREEN}\nOK${WHITE} TESTS $res_1/$val\n"
+printf	"${RED}\nKO${WHITE} TESTS $res_2/$val\n"
+printf "${CYAN}\nCheck traces $PWD/traces.txt\n"
+fi
+
+printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
+printf ${MAGENTA}"\n\t\t  All size test\t\n"${DEF_COLOR};
+printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
+
+echo BONUS-All size test >> traces.txt
+
+val=500
+res_1=0
+res_2=0
+cont=1
+var=0
+while [ $cont -lt $val ] && [ $var -lt 500 ]
+do
+ARG=$(ruby -e "puts (00..$var).to_a.shuffle.join(' ')");
+var=$(($var + 1))
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}$cont .[OK] ${DEF_COLOR}";
+	((res_1++))
+else
+	printf "${RED}$cont .[KO] ${DEF_COLOR}";
+	echo TEST $cont ARG:"$ARG" >> traces.txt
+ 	((res_2++))
+fi
+((cont++))
+done
+
+while [ $var -lt 1000 ]
+do
+ARG=$(ruby -e "puts (00..$var).to_a.shuffle.join(' ')");
+var=$(($var + 25))
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+R=$(./push_swap $ARG | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}$cont .[OK] ${DEF_COLOR}";
+	((res_1++))
+else
+	printf "${RED}$cont .[KO] ${DEF_COLOR}";
+	echo TEST $cont ARG:"$ARG" >> traces.txt
+ 	((res_2++))
+fi
+((cont++))
+done
+
+((cont--))
+echo
+
+val=$(($val+$var))
+
+((val--))
+if [ $res_1 == $cont ]; then
+	printf "${GREEN}\nCongrats , all tests have been completed successfully 🥳✅\n"
+	echo OK >> traces.txt
+fi
+if [ $res_2 != 0 ]; then
+printf	"${GREEN}\nOK${WHITE} TESTS $res_1/$cont\n"
+printf	"${RED}\nKO${WHITE} TESTS $res_2/$cont\n"
+printf "${CYAN}\nCheck traces $PWD/traces.txt\n"
 fi
