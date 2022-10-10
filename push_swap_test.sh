@@ -22,8 +22,16 @@ rm -rf traces.txt
 
 # -=-=-=-=-	Control errors -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
-if [ $1 != -b ] || [ -z "$1" ]; then
+FILE=$PWD/push_swap
 
+if [ -f "$FILE" ]; then
+	echo -n
+else
+	printf "${RED}NO EXIST PUSH_SWAP PROGRAM ${DEF_COLOR}\n";
+	exit 0
+fi
+
+if [ -z "$1" ] || [ $1 != -b ]; then
 printf ${BLUE}"\n-------------------------------------------------------------\n"${DEF_COLOR};
 printf ${BLUE}"\n\t\t\tCONTROL ERRORS\t\n"${DEF_COLOR};
 printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
@@ -3434,6 +3442,15 @@ else
 fi
 
 else
+
+FILE=$PWD/checker
+
+if [ -f "$FILE" ]; then
+	echo -n
+else
+	printf "${RED}NO EXIST CHECKER PROGRAM ${DEF_COLOR}\n";
+	exit 0
+fi
 
 printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 printf ${MAGENTA}"\n\t\t\t  BONUS\t\t\n"${DEF_COLOR};
