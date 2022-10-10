@@ -22,6 +22,8 @@ rm -rf traces.txt
 
 # -=-=-=-=-	Control errors -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
+if [ $1 != -b ] && [ !$1 ]; then
+
 printf ${BLUE}"\n-------------------------------------------------------------\n"${DEF_COLOR};
 printf ${BLUE}"\n\t\t\tCONTROL ERRORS\t\n"${DEF_COLOR};
 printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
@@ -3431,7 +3433,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-if [ $1 == -b ]; then
+else
 
 printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 printf ${MAGENTA}"\n\t\t\t  BONUS\t\t\n"${DEF_COLOR};
@@ -3962,10 +3964,7 @@ echo BONUS-Multible size '<'= 100 >> traces.txt
 
 val=101
 
-if [ $1 ] && [ $1 != -b ]; then
-	val=$(($1+1))
-fi
-if [ $1 == -b ] && [ $2 ]; then
+if [ $2 ]; then
 	val=$(($2+1))
 fi
 res_1=0
@@ -4009,9 +4008,6 @@ echo BONUS-Multible size '<'= 500 >> traces.txt
 val=101
 
 if [ $2 ]; then
-	val=$(($2+1))
-fi
-if [ $1 == -b ] && [ $2 ]; then
 	val=$(($3+1))
 fi
 
