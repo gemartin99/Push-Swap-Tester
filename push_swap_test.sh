@@ -3961,7 +3961,7 @@ fi
 
 
 printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
-printf ${MAGENTA}"\n\t\t  Multible size <= 100\t\t\n"${DEF_COLOR};
+printf ${MAGENTA}"\n\t\t  Multiple size <= 100\t\t\n"${DEF_COLOR};
 printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 
 echo BONUS-Multible size '<'= 100 >> traces.txt
@@ -4012,7 +4012,7 @@ else
 fi
 
 printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
-printf ${MAGENTA}"\n\t\t  Multible size <= 500\t\t\n"${DEF_COLOR};
+printf ${MAGENTA}"\n\t\t  Multiple size <= 500\t\t\n"${DEF_COLOR};
 printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 
 echo BONUS-Multible size '<'= 500 >> traces.txt
