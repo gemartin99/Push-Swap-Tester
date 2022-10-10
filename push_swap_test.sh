@@ -3149,6 +3149,126 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
+ARG=$(ruby -e "puts (-2147483648..-2147483149).to_a.shuffle.join(' ')"); 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -lt 5500 ]; then
+	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
+elif [ $N -gt 5500 ] && [ $N -lt 7000 ]; then
+	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
+elif [ $N -gt 7000 ] && [ $N -lt 8500 ]; then
+	printf "${RED}[KO][3/5]${DEF_COLOR}";
+elif [ $N -gt 8500 ] && [ $N -lt 10000 ]; then
+	printf "${RED}[KO][2/5]${DEF_COLOR}";
+elif [ $N -gt 11500 ]; then
+	printf "${RED}[KO][1/5]${DEF_COLOR}";
+fi
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+if [ $S == "OK" ]; then
+	printf "${GREEN} [OK]${DEF_COLOR}\n";
+else
+	printf "${RED} [KO]${DEF_COLOR}\n";
+fi
+
+ARG=$(ruby -e "puts (-2147483648..-2147483149).to_a.shuffle.join(' ')"); 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -lt 5500 ]; then
+	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
+elif [ $N -gt 5500 ] && [ $N -lt 7000 ]; then
+	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
+elif [ $N -gt 7000 ] && [ $N -lt 8500 ]; then
+	printf "${RED}[KO][3/5]${DEF_COLOR}";
+elif [ $N -gt 8500 ] && [ $N -lt 10000 ]; then
+	printf "${RED}[KO][2/5]${DEF_COLOR}";
+elif [ $N -gt 11500 ]; then
+	printf "${RED}[KO][1/5]${DEF_COLOR}";
+fi
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+if [ $S == "OK" ]; then
+	printf "${GREEN} [OK]${DEF_COLOR}\n";
+else
+	printf "${RED} [KO]${DEF_COLOR}\n";
+fi
+
+ARG=$(ruby -e "puts (-2147483648..-2147483149).to_a.shuffle.join(' ')"); 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -lt 5500 ]; then
+	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
+elif [ $N -gt 5500 ] && [ $N -lt 7000 ]; then
+	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
+elif [ $N -gt 7000 ] && [ $N -lt 8500 ]; then
+	printf "${RED}[KO][3/5]${DEF_COLOR}";
+elif [ $N -gt 8500 ] && [ $N -lt 10000 ]; then
+	printf "${RED}[KO][2/5]${DEF_COLOR}";
+elif [ $N -gt 11500 ]; then
+	printf "${RED}[KO][1/5]${DEF_COLOR}";
+fi
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+if [ $S == "OK" ]; then
+	printf "${GREEN} [OK]${DEF_COLOR}\n";
+else
+	printf "${RED} [KO]${DEF_COLOR}\n";
+fi
+
+ARG=$(ruby -e "puts (-2147483648..-2147483149).to_a.shuffle.join(' ')"); 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -lt 5500 ]; then
+	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
+elif [ $N -gt 5500 ] && [ $N -lt 7000 ]; then
+	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
+elif [ $N -gt 7000 ] && [ $N -lt 8500 ]; then
+	printf "${RED}[KO][3/5]${DEF_COLOR}";
+elif [ $N -gt 8500 ] && [ $N -lt 10000 ]; then
+	printf "${RED}[KO][2/5]${DEF_COLOR}";
+elif [ $N -gt 11500 ]; then
+	printf "${RED}[KO][1/5]${DEF_COLOR}";
+fi
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+if [ $S == "OK" ]; then
+	printf "${GREEN} [OK]${DEF_COLOR}\n";
+else
+	printf "${RED} [KO]${DEF_COLOR}\n";
+fi
+
+ARG=$(ruby -e "puts (-2147483648..-2147483149).to_a.shuffle.join(' ')"); 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -lt 5500 ]; then
+	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
+elif [ $N -gt 5500 ] && [ $N -lt 7000 ]; then
+	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
+elif [ $N -gt 7000 ] && [ $N -lt 8500 ]; then
+	printf "${RED}[KO][3/5]${DEF_COLOR}";
+elif [ $N -gt 8500 ] && [ $N -lt 10000 ]; then
+	printf "${RED}[KO][2/5]${DEF_COLOR}";
+elif [ $N -gt 11500 ]; then
+	printf "${RED}[KO][1/5]${DEF_COLOR}";
+fi
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+if [ $S == "OK" ]; then
+	printf "${GREEN} [OK]${DEF_COLOR}\n";
+else
+	printf "${RED} [KO]${DEF_COLOR}\n";
+fi
+
+ARG=$(ruby -e "puts (-2147483648..-2147483149).to_a.shuffle.join(' ')"); 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -lt 5500 ]; then
+	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
+elif [ $N -gt 5500 ] && [ $N -lt 7000 ]; then
+	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
+elif [ $N -gt 7000 ] && [ $N -lt 8500 ]; then
+	printf "${RED}[KO][3/5]${DEF_COLOR}";
+elif [ $N -gt 8500 ] && [ $N -lt 10000 ]; then
+	printf "${RED}[KO][2/5]${DEF_COLOR}";
+elif [ $N -gt 11500 ]; then
+	printf "${RED}[KO][1/5]${DEF_COLOR}";
+fi
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+if [ $S == "OK" ]; then
+	printf "${GREEN} [OK]${DEF_COLOR}\n";
+else
+	printf "${RED} [KO]${DEF_COLOR}\n";
+fi
+
 ARG=$(ruby -e "puts (0..499).to_a.shuffle.join(' ')"); 
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
@@ -3309,6 +3429,26 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
+ARG=$(ruby -e "puts (500000000..500000499).to_a.shuffle.join(' ')"); 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -lt 5500 ]; then
+	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
+elif [ $N -gt 5500 ] && [ $N -lt 7000 ]; then
+	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
+elif [ $N -gt 7000 ] && [ $N -lt 8500 ]; then
+	printf "${RED}[KO][3/5]${DEF_COLOR}";
+elif [ $N -gt 8500 ] && [ $N -lt 10000 ]; then
+	printf "${RED}[KO][2/5]${DEF_COLOR}";
+elif [ $N -gt 11500 ]; then
+	printf "${RED}[KO][1/5]${DEF_COLOR}";
+fi
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+if [ $S == "OK" ]; then
+	printf "${GREEN} [OK]${DEF_COLOR}\n";
+else
+	printf "${RED} [KO]${DEF_COLOR}\n";
+fi
+
 ARG=$(ruby -e "puts (0..450).to_a.shuffle.join(' ')");
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
@@ -3390,6 +3530,26 @@ else
 fi
 
 ARG=$(ruby -e "puts (90000..90460).to_a.shuffle.join(' ')");
+N=$(./push_swap $ARG | wc -l)
+if [ $N -lt 5500 ]; then
+	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
+elif [ $N -gt 5500 ] && [ $N -lt 7000 ]; then
+	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
+elif [ $N -gt 7000 ] && [ $N -lt 8500 ]; then
+	printf "${RED}[KO][3/5]${DEF_COLOR}";
+elif [ $N -gt 8500 ] && [ $N -lt 10000 ]; then
+	printf "${RED}[KO][2/5]${DEF_COLOR}";
+elif [ $N -gt 11500 ]; then
+	printf "${RED}[KO][1/5]${DEF_COLOR}";
+fi
+S=$(./push_swap $ARG | ./checker_OS $ARG)
+if [ $S == "OK" ]; then
+	printf "${GREEN} [OK]${DEF_COLOR}\n";
+else
+	printf "${RED} [KO]${DEF_COLOR}\n";
+fi
+
+ARG=$(ruby -e "puts (-500..-9).to_a.shuffle.join(' ')");
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -4132,3 +4292,4 @@ fi
 fi
 
 rm -rf 0
+rm -rf test_check.txt
