@@ -8,6 +8,8 @@
 
 ### 🔹 Tests infinitos de 100 numeros y 500 donde te indica la eficiencia y el numero de movimientos.
 
+### 🔹 Un test para cada tamaño posible del 1 al 500.
+
 ### 🔹 Tests en caso de argumentos ya ordenados.
 
 ### 🔹 Indicador de promedio de movimientos.
@@ -40,14 +42,6 @@ Si quieres ejecutar el bonus y definir la cantidad de test de size100 y size500:
 
 # Espero que te sea útil! 😁
 
-# Contacto 📥
-
-### Contacta conmigo si hay algun problema o necesitas ayuda! Puede ayudar a futuros estudiantes! 😁
-
-◦ Email: gemartin@student.42barcelona.com
-
-◦ Linkedin: https://www.linkedin.com/in/gemartin99/
-
 # Quizás pueda interesarte!
 
 ### - Para ver mi progresion en el common core 42 ↙️
@@ -56,3 +50,11 @@ Si quieres ejecutar el bonus y definir la cantidad de test de size100 y size500:
 
 ### - Mi perfil en la intranet de 42 ↙️
 [AQUÍ](https://profile.intra.42.fr/users/gemartin)
+
+# Contacto 📥
+
+### Contacta conmigo si hay algun problema o necesitas ayuda! Puede ayudar a futuros estudiantes! 😁
+
+◦ Email: gemartin@student.42barcelona.com
+
+◦ Linkedin: https://www.linkedin.com/in/gemartin99/
