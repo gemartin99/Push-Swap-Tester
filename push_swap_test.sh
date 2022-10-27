@@ -377,6 +377,8 @@ do
   fi
 done < test_check.txt
 
+rm -rf test_check.txt
+
 # -=-=-=-=-	Basic -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
 printf ${BLUE}"\n-------------------------------------------------------------\n"${DEF_COLOR};
@@ -3033,89 +3035,155 @@ printf ${BLUE}"\n-------------------------------------------------------------\n
 ARG=""; 
 N=$(./push_swap $ARG | wc -l)
 if [ $N -eq 0 ]; then
-	printf "${GREEN}1. [OK]${DEF_COLOR}\n";
+	printf "${GREEN}1. [OK]${DEF_COLOR}";
 else
-	printf "${RED}1. [KO]${DEF_COLOR}\n";
+	printf "${RED}1. [KO]${DEF_COLOR}";
+fi
+R=$(leaks -atExit -- ./push_swap $ARG > /dev/null && echo $?)
+if [[ $R == 0 ]]; then
+  printf "${GREEN}[MOK] ${DEF_COLOR}\n";
+else
+  printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
 fi
 
 ARG="1 2 3 4 5 6 7 8 9"; 
 N=$(./push_swap $ARG | wc -l)
 if [ $N -eq 0 ]; then
-	printf "${GREEN}2. [OK]${DEF_COLOR}\n";
+	printf "${GREEN}2. [OK]${DEF_COLOR}";
 else
-	printf "${RED}2. [KO]${DEF_COLOR}\n";
+	printf "${RED}2. [KO]${DEF_COLOR}";
+fi
+R=$(leaks -atExit -- ./push_swap $ARG > /dev/null && echo $?)
+if [[ $R == 0 ]]; then
+  printf "${GREEN}[MOK] ${DEF_COLOR}\n";
+else
+  printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
 fi
 
 ARG="1 2 3"; 
 N=$(./push_swap $ARG | wc -l)
 if [ $N -eq 0 ]; then
-	printf "${GREEN}3. [OK]${DEF_COLOR}\n";
+	printf "${GREEN}3. [OK]${DEF_COLOR}";
 else
-	printf "${RED}3. [KO]${DEF_COLOR}\n";
+	printf "${RED}3. [KO]${DEF_COLOR}";
+fi
+R=$(leaks -atExit -- ./push_swap $ARG > /dev/null && echo $?)
+if [[ $R == 0 ]]; then
+  printf "${GREEN}[MOK] ${DEF_COLOR}\n";
+else
+  printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
 fi
 
 ARG="1"; 
 N=$(./push_swap $ARG | wc -l)
 if [ $N -eq 0 ]; then
-	printf "${GREEN}4. [OK]${DEF_COLOR}\n";
+	printf "${GREEN}4. [OK]${DEF_COLOR}";
 else
-	printf "${RED}4. [KO]${DEF_COLOR}\n";
+	printf "${RED}4. [KO]${DEF_COLOR}";
+fi
+R=$(leaks -atExit -- ./push_swap $ARG > /dev/null && echo $?)
+if [[ $R == 0 ]]; then
+  printf "${GREEN}[MOK] ${DEF_COLOR}\n";
+else
+  printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
 fi
 
 ARG="1 2"; 
 N=$(./push_swap $ARG | wc -l)
 if [ $N -eq 0 ]; then
-	printf "${GREEN}5. [OK]${DEF_COLOR}\n";
+	printf "${GREEN}5. [OK]${DEF_COLOR}";
 else
-	printf "${RED}6. [KO]${DEF_COLOR}\n";
+	printf "${RED}6. [KO]${DEF_COLOR}";
+fi
+R=$(leaks -atExit -- ./push_swap $ARG > /dev/null && echo $?)
+if [[ $R == 0 ]]; then
+  printf "${GREEN}[MOK] ${DEF_COLOR}\n";
+else
+  printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
 fi
 
 ARG="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"; 
 N=$(./push_swap $ARG | wc -l)
 if [ $N -eq 0 ]; then
-	printf "${GREEN}7. [OK]${DEF_COLOR}\n";
+	printf "${GREEN}7. [OK]${DEF_COLOR}";
 else
-	printf "${RED}7. [KO]${DEF_COLOR}\n";
+	printf "${RED}7. [KO]${DEF_COLOR}";
+fi
+R=$(leaks -atExit -- ./push_swap $ARG > /dev/null && echo $?)
+if [[ $R == 0 ]]; then
+  printf "${GREEN}[MOK] ${DEF_COLOR}\n";
+else
+  printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
 fi
 
 ARG="6 7 8"; 
 N=$(./push_swap $ARG | wc -l)
 if [ $N -eq 0 ]; then
-	printf "${GREEN}8. [OK]${DEF_COLOR}\n";
+	printf "${GREEN}8. [OK]${DEF_COLOR}";
 else
-	printf "${RED}8. [KO]${DEF_COLOR}\n";
+	printf "${RED}8. [KO]${DEF_COLOR}";
+fi
+R=$(leaks -atExit -- ./push_swap $ARG > /dev/null && echo $?)
+if [[ $R == 0 ]]; then
+  printf "${GREEN}[MOK] ${DEF_COLOR}\n";
+else
+  printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
 fi
 
 ARG="2147483645 2147483646 2147483647"; 
 N=$(./push_swap $ARG | wc -l)
 if [ $N -eq 0 ]; then
-	printf "${GREEN}9. [OK]${DEF_COLOR}\n";
+	printf "${GREEN}9. [OK]${DEF_COLOR}";
 else
-	printf "${RED}9. [KO]${DEF_COLOR}\n";
+	printf "${RED}9. [KO]${DEF_COLOR}";
+fi
+R=$(leaks -atExit -- ./push_swap $ARG > /dev/null && echo $?)
+if [[ $R == 0 ]]; then
+  printf "${GREEN}[MOK] ${DEF_COLOR}\n";
+else
+  printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
 fi
 
 ARG="-2147483648 -2147483647 -2147483646"; 
 N=$(./push_swap $ARG | wc -l)
 if [ $N -eq 0 ]; then
-	printf "${GREEN}10. [OK]${DEF_COLOR}\n";
+	printf "${GREEN}10. [OK]${DEF_COLOR}";
 else
-	printf "${RED}10. [KO]${DEF_COLOR}\n";
+	printf "${RED}10. [KO]${DEF_COLOR}";
+fi
+R=$(leaks -atExit -- ./push_swap $ARG > /dev/null && echo $?)
+if [[ $R == 0 ]]; then
+  printf "${GREEN}[MOK] ${DEF_COLOR}\n";
+else
+  printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
 fi
 
 ARG="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50"; 
 N=$(./push_swap $ARG | wc -l)
 if [ $N -eq 0 ]; then
-	printf "${GREEN}11. [OK]${DEF_COLOR}\n";
+	printf "${GREEN}11. [OK]${DEF_COLOR}";
 else
-	printf "${RED}11. [KO]${DEF_COLOR}\n";
+	printf "${RED}11. [KO]${DEF_COLOR}";
+fi
+R=$(leaks -atExit -- ./push_swap $ARG > /dev/null && echo $?)
+if [[ $R == 0 ]]; then
+  printf "${GREEN}[MOK] ${DEF_COLOR}\n";
+else
+  printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
 fi
 
 ARG="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77"; 
 N=$(./push_swap $ARG | wc -l)
 if [ $N -eq 0 ]; then
-	printf "${GREEN}12. [OK]${DEF_COLOR}\n";
+	printf "${GREEN}12. [OK]${DEF_COLOR}";
 else
-	printf "${RED}12. [KO]${DEF_COLOR}\n";
+	printf "${RED}12. [KO]${DEF_COLOR}";
+fi
+R=$(leaks -atExit -- ./push_swap $ARG > /dev/null && echo $?)
+if [[ $R == 0 ]]; then
+  printf "${GREEN}[MOK] ${DEF_COLOR}\n";
+else
+  printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
 fi
 
 printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
@@ -3563,7 +3631,7 @@ else
 fi
 
 printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
-printf ${BLUE}"\n\t\t  All size test\t\n"${DEF_COLOR};
+printf ${BLUE}"\n\t\t  All size test + leaks check\t\n"${DEF_COLOR};
 printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 
 echo All size test >> traces.txt
@@ -3586,6 +3654,13 @@ else
 	echo TEST $cont ARG:"$ARG" >> traces.txt
  	((res_2++))
 fi
+R=$(leaks -atExit -- ./push_swap $ARG > /dev/null && echo $?)
+if [[ $R == 0 ]]; then
+  printf "${GREEN}[MOK] ${DEF_COLOR}";
+else
+  printf "${RED} [KO LEAKS] ${DEF_COLOR}";
+fi
+echo 
 ((cont++))
 done
 
@@ -4247,7 +4322,7 @@ printf "${CYAN}\nCheck traces $PWD/traces.txt\n"
 fi
 
 printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
-printf ${MAGENTA}"\n\t\t  All size test\t\n"${DEF_COLOR};
+printf ${MAGENTA}"\n\t\t  All size test + leaks check\t\n"${DEF_COLOR};
 printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 
 echo BONUS-All size test >> traces.txt
@@ -4271,6 +4346,13 @@ else
 	echo TEST $cont ARG:"$ARG" >> traces.txt
  	((res_2++))
 fi
+R=$(./push_swap $ARG | leaks -atExit -- ./checker $ARG > /dev/null && echo $?)
+if [[ $R == 0 ]]; then
+  printf "${GREEN}[MOK] ${DEF_COLOR}";
+else
+  printf "${RED} [KO LEAKS] ${DEF_COLOR}";
+fi
+echo
 ((cont++))
 done
 
@@ -4288,6 +4370,13 @@ else
 	echo TEST $cont ARG:"$ARG" >> traces.txt
  	((res_2++))
 fi
+R=$(./push_swap $ARG | leaks -atExit -- ./checker $ARG > /dev/null && echo $?)
+if [[ $R == 0 ]]; then
+  printf "${GREEN}[MOK] ${DEF_COLOR}";
+else
+  printf "${RED} [KO LEAKS] ${DEF_COLOR}";
+fi
+echo
 ((cont++))
 done
 
