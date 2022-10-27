@@ -14,6 +14,8 @@
 
 ### 🔹 Indicador de promedio de movimientos.
 
+### 🔹 Controlación de leaks de memoria.
+
 ### 🔹 Checkeo del bonus.
 
 ## Uso
