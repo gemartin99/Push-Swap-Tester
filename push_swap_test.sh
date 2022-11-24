@@ -3297,10 +3297,24 @@ else
   printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
 fi
 
-ARG="1 2"; 
+ARG="0 1 2 3 4"; 
 N=$(./push_swap $ARG | wc -l)
 if [ $N -eq 0 ]; then
 	printf "${GREEN}5. [OK]${DEF_COLOR}";
+else
+	printf "${RED}5. [KO]${DEF_COLOR}";
+fi
+R=$(leaks -atExit -- ./push_swap $ARG > /dev/null && echo $?)
+if [[ $R == 0 ]]; then
+  printf "${GREEN}[MOK] ${DEF_COLOR}\n";
+else
+  printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
+fi
+
+ARG="1 2"; 
+N=$(./push_swap $ARG | wc -l)
+if [ $N -eq 0 ]; then
+	printf "${GREEN}6. [OK]${DEF_COLOR}";
 else
 	printf "${RED}6. [KO]${DEF_COLOR}";
 fi
