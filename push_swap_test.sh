@@ -3859,47 +3859,72 @@ printf ${BLUE}"\n-------------------------------------------------------------\n
 
 echo All size test >> traces.txt
 
-val=501
+printf "\n${WHITE}⚠️ This test is very long. It is recommended to use it only when the project is finished or in an evaluation ⚠️${DEF_COLOR}\n\n\n";
+
+sleep 1
+
 res_1=0
 res_2=0
+res_3=0
+res_4=0
 cont=1
-var=0
-while [ $cont -lt $val ] && [ $var -lt 501 ]
+cont2=1
+cont3=1
+cont4=0
+while [ $cont2 -lt 501 ]
 do
-ARG=$(ruby -e "puts (00..$var).to_a.shuffle.join(' ')");
-var=$(($var + 1))
+cont=1
+while [ $cont -lt 6 ]
+do
+ARG=$(ruby -e "puts (00..($cont2)).to_a.shuffle.join(' ')");
+N=$(./push_swap $ARG | wc -l)
 S=$(./push_swap $ARG | ./checker_OS $ARG)
 if [ $S == "OK" ]; then
-	printf "${GREEN}$cont .[OK] ${DEF_COLOR}";
+	printf "${GREEN}$cont3 .[OK]${DEF_COLOR}";
+	((cont2++))
+	printf	"${MAGENTA} Num args: $cont2 ${DEF_COLOR}"
+	((cont2--))
+	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
 	((res_1++))
 else
-	printf "${RED}$cont .[KO] ${DEF_COLOR}";
+	printf "${RED}$cont3 .[KO]${DEF_COLOR}\n";
 	echo TEST $cont ARG:"$ARG" >> traces.txt
- 	((res_2++))
+	((res_2++))
 fi
+if [ $cont -eq 5 ]; then
+
 R=$(leaks -atExit -- ./push_swap $ARG > /dev/null && echo $?)
+((cont4++))
 if [[ $R == 0 ]]; then
-  printf "${GREEN}[MOK] ${DEF_COLOR}";
+  printf "${GREEN}$cont3 [MEMORY OK] ${DEF_COLOR}\n";
+  ((res_3++))
 else
-  printf "${RED} [KO LEAKS] ${DEF_COLOR}";
+  printf "${RED}$cont3 [KO LEAKS] ${DEF_COLOR}\n";
+  echo TEST LEAKS $cont ARG:"$ARG" >> traces.txt
+  ((res_4++))
 fi
-echo 
+fi
 ((cont++))
+((cont3++))
+done
+((cont2++))
 done
 
-((cont--))
-echo
+((cont3--))
 
-val=$(($val+$var))
-
-((val--))
-if [ $res_1 == $cont ]; then
+if [ $res_1 == $cont3 ]; then
 	printf "${GREEN}\nCongrats , all tests have been completed successfully 🥳✅\n"
 	echo OK >> traces.txt
 fi
 if [ $res_2 != 0 ]; then
-printf	"${GREEN}\nOK${WHITE} TESTS $res_1/$cont\n"
-printf	"${RED}\nKO${WHITE} TESTS $res_2/$cont\n"
+printf	"${GREEN}\nOK${WHITE} TESTS $res_1/$cont3\n"
+printf	"${RED}\nKO${WHITE} TESTS $res_2/$cont3\n"
+printf "${CYAN}\nCheck traces $PWD/traces.txt\n"
+fi
+
+if [ $res_4 != 0 ]; then
+printf	"${GREEN}\nOK${WHITE} TESTS $res_3/$cont4\n"
+printf	"${RED}\nKO${WHITE} TESTS $res_4/$cont4\n"
 printf "${CYAN}\nCheck traces $PWD/traces.txt\n"
 fi
 
