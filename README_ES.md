@@ -61,7 +61,8 @@ Si quieres ejecutar el visualizador con unos argumentos en especifico utiliza el
 |TECLA|ACCION|
 |---|---|
 |`I`| Step by Step instructions|
-|`R`| Run all the instructions|
+|`S`| Run all the instructions|
+|`P`| Pause |
 |`1`| exec 'sa'|
 |`2`| exec 'sb'|
 |`3`| exec 'ra'|
