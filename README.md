@@ -61,7 +61,8 @@ If you want to run the viewer with specific arguments use the following command 
 |KEY|ACTION|
 |---|---|
 |`I`| Step by Step instructions|
-|`R`| Run all the instructions|
+|`S`| Run all the instructions|
+|`P`| Pause |
 |`1`| exec 'sa'|
 |`2`| exec 'sb'|
 |`3`| exec 'ra'|
