@@ -42,6 +42,36 @@ And if you want to define the quantity for 100 and 500 tests:
 
 ### ❗️ You can check the sended arguments that makes your program fail with the traces.txt file ❗️
 
+# 👀 Pushswap visualiser 
+
+Useful tool to visualise your algorithm graphically. Program created by ![ailopez-o](https://github.com/ailopez-o).
+
+If you want to run it, type the following command. The number represents the number of arguments push_swap will receive.
+
+```bash push_swap_test.sh -v 500```
+
+<img width="597" alt="Screen Shot 2023-01-13 at 5 23 58 PM" src="https://user-images.githubusercontent.com/66915274/212369245-54455057-43d9-42c5-a916-a825ff505813.png">
+
+If you want to run the viewer with specific arguments use the following command followed by the desired arguments in double quotes.
+
+```bash push_swap_test.sh -v2 "1 4 2 3 5"```
+
+## Controls 🕹
+
+|KEY|ACTION|
+|---|---|
+|`I`| Step by Step instructions|
+|`R`| Run all the instructions|
+|`1`| exec 'sa'|
+|`2`| exec 'sb'|
+|`3`| exec 'ra'|
+|`4`| exec 'rb'|
+|`5`| exec 'rra'|
+|`6`| exec 'rrb'|
+|`7`| exec 'pa'|
+|`8`| exec 'pb'|
+|`ESC ❌`|Close|
+
 # I hope you liked and helped! 😁
 
 # Maybe it would interest you!
