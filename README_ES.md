@@ -44,13 +44,17 @@ Si quieres ejecutar el bonus y definir la cantidad de test de size100 y size500:
 
 # 👀 Visualizador 
 
-Herramienta útil para visualizar tu algoritmo de forma grafica. Programa creado por ![ailopez-o](https://github.com/ailopez-o)
-
-<img width="597" alt="Screen Shot 2023-01-13 at 5 23 58 PM" src="https://user-images.githubusercontent.com/66915274/212369245-54455057-43d9-42c5-a916-a825ff505813.png">
+Herramienta útil para visualizar tu algoritmo de forma grafica. Programa creado por ![ailopez-o](https://github.com/ailopez-o).
 
 Si quieres ejecutarlo escribe el siguiente comando. El numero representa la cantidad de argumentos que recibira push_swap.
 
 ```bash push_swap_test.sh -v 500```
+
+<img width="597" alt="Screen Shot 2023-01-13 at 5 23 58 PM" src="https://user-images.githubusercontent.com/66915274/212369245-54455057-43d9-42c5-a916-a825ff505813.png">
+
+Si quieres ejecutar el visualizador con unos argumentos en especifico utiliza el siguiente comando seguido de los argumentos deseados.
+
+```bash push_swap_test.sh -v2 1 4 2 3 5```
 
 ## Controles 🕹
 
