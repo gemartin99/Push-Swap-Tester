@@ -52,9 +52,9 @@ Si quieres ejecutarlo escribe el siguiente comando. El numero representa la cant
 
 <img width="597" alt="Screen Shot 2023-01-13 at 5 23 58 PM" src="https://user-images.githubusercontent.com/66915274/212369245-54455057-43d9-42c5-a916-a825ff505813.png">
 
-Si quieres ejecutar el visualizador con unos argumentos en especifico utiliza el siguiente comando seguido de los argumentos deseados.
+Si quieres ejecutar el visualizador con unos argumentos en especifico utiliza el siguiente comando seguido de los argumentos deseados entre comillas dobles.
 
-```bash push_swap_test.sh -v2 1 4 2 3 5```
+```bash push_swap_test.sh -v2 "1 4 2 3 5"```
 
 ## Controles 🕹
 
