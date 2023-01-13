@@ -33,6 +33,21 @@ else
 	exit 0
 fi
 
+if [ $1 == -v ];then
+if [ -z "$2" ];then
+	n=500;
+else
+	n=$2;
+fi
+ARG=$(ruby -e "puts (0..($n)).to_a.shuffle.join(' ')"); ./push_swap $ARG | ./pro_checker $ARG
+exit 0
+fi
+
+if [ $1 == -v2 ];then
+ARG=$2; ./push_swap $ARG | ./pro_checker $ARG
+exit 0
+fi
+
 if [ -z "$1" ] || [ $1 != -b ]; then
 printf ${BLUE}"\n-------------------------------------------------------------\n"${DEF_COLOR};
 printf ${BLUE}"\n\t\t\tCONTROL ERRORS\t\n"${DEF_COLOR};
@@ -3967,7 +3982,7 @@ FILE=$PWD/checker
 if [ -f "$FILE" ]; then
 	echo -n
 else
-	printf "${RED}NO EXIST CHECKER PROGRAM ${DEF_COLOR}\n";
+	printf "${RED}NO EXIST CHECKER PROGRAM${DEF_COLOR}\n";
 	exit 0
 fi
 
