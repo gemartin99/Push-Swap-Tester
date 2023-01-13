@@ -42,6 +42,32 @@ Si quieres ejecutar el bonus y definir la cantidad de test de size100 y size500:
 
 ### ❗️ Si falla un test y quieres ver el argumento que ha sido mandado al programa visualiza el fichero traces.txt ❗️
 
+# 👀 Visualizador 
+
+Herramienta útil para visualizar tu algoritmo de forma grafica. Programa creado por ![ailopez-o](https://github.com/ailopez-o)
+
+<img width="597" alt="Screen Shot 2023-01-13 at 5 23 58 PM" src="https://user-images.githubusercontent.com/66915274/212369245-54455057-43d9-42c5-a916-a825ff505813.png">
+
+Si quieres ejecutarlo escribe el siguiente comando. El numero representa la cantidad de argumentos que recibira push_swap.
+
+```bash push_swap_test.sh -v 500```
+
+## Controles 🕹
+
+|TECLA|ACCION|
+|---|---|
+|`I`| Step by Step instructions|
+|`R`| Run all the instructions|
+|`1`| exec 'sa'|
+|`2`| exec 'sb'|
+|`3`| exec 'ra'|
+|`4`| exec 'rb'|
+|`5`| exec 'rra'|
+|`6`| exec 'rrb'|
+|`7`| exec 'pa'|
+|`8`| exec 'pb'|
+|`ESC ❌`|Close|
+
 # Espero que te sea útil! 😁
 
 # Quizás pueda interesarte!
