@@ -46,6 +46,8 @@ Si quieres ejecutar el bonus y definir la cantidad de test de size100 y size500:
 
 Herramienta útil para visualizar tu algoritmo de forma grafica. Programa creado por ![ailopez-o](https://github.com/ailopez-o).
 
+https://github.com/ailopez-o/42Barcelona-PushSwap-ProChecker
+
 Si quieres ejecutarlo escribe el siguiente comando. El numero representa la cantidad de argumentos que recibira push_swap.
 
 ```bash push_swap_test.sh -v 500```
