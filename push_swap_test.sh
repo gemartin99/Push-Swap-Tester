@@ -3029,10 +3029,10 @@ else
 fi
 
 printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
-printf ${BLUE}"\n\t\t  Multible size <= 100\t\t\n"${DEF_COLOR};
+printf ${BLUE}"\n\t\t  Multiple size <= 100\t\t\n"${DEF_COLOR};
 printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 
-echo Multible size '<'= 100 >> traces.txt
+echo Multiple size '<'= 100 >> traces.txt
 
 res_1=0
 res_2=0
@@ -3161,7 +3161,7 @@ printf ${BLUE}"\n-------------------------------------------------------------\n
 printf ${BLUE}"\n\t\t  Multiple size <= 500\t\t\n"${DEF_COLOR};
 printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 
-echo Multible size '<'= 500 >> traces.txt
+echo Multiple size '<'= 500 >> traces.txt
 
 res_1=0
 res_2=0
@@ -4661,7 +4661,7 @@ printf ${MAGENTA}"\n------------------------------------------------------------
 printf ${MAGENTA}"\n\t\t  Multiple size <= 100\t\t\n"${DEF_COLOR};
 printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 
-echo BONUS-Multible size '<'= 100 >> traces.txt
+echo BONUS-Multiple size '<'= 100 >> traces.txt
 
 val=101
 
@@ -4707,7 +4707,7 @@ printf ${MAGENTA}"\n------------------------------------------------------------
 printf ${MAGENTA}"\n\t\t  Multiple size <= 500\t\t\n"${DEF_COLOR};
 printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 
-echo BONUS-Multible size '<'= 500 >> traces.txt
+echo BONUS-Multiple size '<'= 500 >> traces.txt
 
 val=101
 
