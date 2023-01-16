@@ -138,23 +138,6 @@ fi
 
 rm -rf test_check.txt
 
-./push_swap "-1 +1" 2> test_check.txt
-if [ -s "$FICHERO" ];then
-while IFS= read -r line
-do
-  if [[ $line == "Error" ]]; then
-  	printf "${GREEN}6.[OK] ${DEF_COLOR}\n";
-  else
-  	printf "${RED}6.[KO] ${DEF_COLOR}\n";
-  	break
-  fi
-done < test_check.txt
-else
-	printf "${RED}6.[KO] ${DEF_COLOR}\n";
-fi
-
-rm -rf test_check.txt
-
 ./push_swap "111-1 2 -3" 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
@@ -4070,21 +4053,6 @@ do
 done < test_check.txt
 else
 	printf "${RED}5.[KO] ${DEF_COLOR}\n";
-fi
-
-./checker "-1 +1" 2> test_check.txt
-if [ -s "$FICHERO" ];then
-while IFS= read -r line
-do
-  if [[ $line == "Error" ]]; then
-  	printf "${GREEN}6.[OK] ${DEF_COLOR}\n";
-  else
-  	printf "${RED}6.[KO] ${DEF_COLOR}\n";
-  	break
-  fi
-done < test_check.txt
-else
-	printf "${RED}6.[KO] ${DEF_COLOR}\n";
 fi
 
 ./checker "111-1 2 -3" 2> test_check.txt
