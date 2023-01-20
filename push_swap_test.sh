@@ -4531,6 +4531,36 @@ else
 fi
 
 # Checkear nombres de funciones diferentes
+printf ${MAGENTA}"\n-------------------------------------------------------------\n"${DEF_COLOR};
+printf ${MAGENTA}"\n\t\t\tCheck operations\t\t\n"${DEF_COLOR};
+printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
+
+ARG="2 1 3";
+S=$(echo -e "sa" | ./checker_OS $ARG)
+R=$(echo -e "sa" | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}SA 1.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}1.[KO]${DEF_COLOR}\n";
+fi
+
+ARG="2 1 3";
+S=$(echo -e "sa\nsa\nsa" | ./checker_OS $ARG)
+R=$(echo -e "sa\nsa\nsa" | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}2.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}2.[KO]${DEF_COLOR}\n";
+fi
+
+ARG="2 1 3";
+S=$(echo -e "sa\nsa" | ./checker_OS $ARG)
+R=$(echo -e "sa\nsa" | ./checker $ARG)
+if [ $S == $R ]; then
+	printf "${GREEN}2.[OK] ${DEF_COLOR}\n";
+else
+	printf "${RED}2.[KO]${DEF_COLOR}\n";
+fi
 
 printf ${MAGENTA}"\n-------------------------------------------------------------\n"${DEF_COLOR};
 printf ${MAGENTA}"\n\t\t\tBasic Input\t\t\n"${DEF_COLOR};
