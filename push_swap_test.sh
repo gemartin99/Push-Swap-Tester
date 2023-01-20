@@ -595,6 +595,40 @@ else
 fi
 
 rm -rf test_check.txt
+
+./push_swap "--123 1 321" 2> test_check.txt
+if [ -s "$FICHERO" ];then
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}34.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}34.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+else
+	printf "${RED}34.[KO] ${DEF_COLOR}\n";
+fi
+
+rm -rf test_check.txt
+
+./push_swap "++123 1 321" 2> test_check.txt
+if [ -s "$FICHERO" ];then
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}35.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}35.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+else
+	printf "${RED}35.[KO] ${DEF_COLOR}\n";
+fi
+
+rm -rf test_check.txt
 rm -rf 0
 
 # -=-=-=-=-	Basic -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
@@ -4428,6 +4462,72 @@ do
 done < test_check.txt
 else
 	printf "${RED}31.[KO] ${DEF_COLOR}\n";
+fi
+
+rm -rf test_check.txt
+
+./checker "-" 2> test_check.txt
+if [ -s "$FICHERO" ];then
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}32.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}32.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+else
+	printf "${RED}32.[KO] ${DEF_COLOR}\n";
+fi
+
+rm -rf test_check.txt
+
+./checker "+" 2> test_check.txt
+if [ -s "$FICHERO" ];then
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}33.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}33.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+else
+	printf "${RED}33.[KO] ${DEF_COLOR}\n";
+fi
+
+./push_swap "--123 1 321" 2> test_check.txt
+if [ -s "$FICHERO" ];then
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}34.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}34.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+else
+	printf "${RED}34.[KO] ${DEF_COLOR}\n";
+fi
+
+rm -rf test_check.txt
+
+./push_swap "++123 1 321" 2> test_check.txt
+if [ -s "$FICHERO" ];then
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+  	printf "${GREEN}35.[OK] ${DEF_COLOR}\n";
+  else
+  	printf "${RED}35.[KO] ${DEF_COLOR}\n";
+  	break
+  fi
+done < test_check.txt
+else
+	printf "${RED}35.[KO] ${DEF_COLOR}\n";
 fi
 
 # Checkear nombres de funciones diferentes
