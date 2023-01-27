@@ -46,7 +46,7 @@ Si quieres ejecutar el bonus y definir la cantidad de test de size100 y size500:
 
 Herramienta útil para visualizar tu algoritmo de forma grafica. Programa creado por ![ailopez-o](https://github.com/ailopez-o).
 
-https://github.com/ailopez-o/42Barcelona-PushSwap-ProChecker
+![REPOSITORIO DEL VISUALIZADOR](https://github.com/ailopez-o/42Barcelona-PushSwap-ProChecker)
 
 Si quieres ejecutarlo escribe el siguiente comando. El numero representa la cantidad de argumentos que recibira push_swap.
 
@@ -93,3 +93,16 @@ Si quieres ejecutar el visualizador con unos argumentos en especifico utiliza el
 ◦ Email: gemartin@student.42barcelona.com
 
 ◦ Linkedin: https://www.linkedin.com/in/gemartin99/
+
+# Contacto de Ailopez 📬
+
+### Contacta con él si hay algun error con el visualizador! Puede ayudar a futuros estudiantes! 😁
+
+◦ Email: ailopez-@student.42barcelona.com
+
+◦ Linkedin: https://www.linkedin.com/in/aitor-lopez-de-audicana-70125b38/
+
+◦ Github: https://github.com/ailopez-o
+
+◦ Perfil en la intranet de 42: https://profile.intra.42.fr/users/ailopez-
+
