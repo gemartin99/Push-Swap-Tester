@@ -98,8 +98,10 @@ If you want to run the viewer with specific arguments use the following command 
 
 ### Contact him if you find any errors in the display! It may help future students! 😁
 
-◦ Email: gemartin@student.42barcelona.com
+◦ Email: ailopez-@student.42barcelona.com
 
 ◦ Linkedin: https://www.linkedin.com/in/aitor-lopez-de-audicana-70125b38/
 
 ◦ Github: https://github.com/ailopez-o
+
+◦ His 42 intra profile: https://profile.intra.42.fr/users/ailopez-
