@@ -42,11 +42,11 @@ And if you want to define the quantity for 100 and 500 tests:
 
 ### ❗️ You can check the sended arguments that makes your program fail with the traces.txt file ❗️
 
-# 👀 Pushswap visualiser 
+# 👀 Pushswap visualizer 
 
 Useful tool to visualise your algorithm graphically. Program created by ![ailopez-o](https://github.com/ailopez-o).
 
-https://github.com/ailopez-o/42Barcelona-PushSwap-ProChecker
+[VISUALIZER REPO](https://github.com/ailopez-o/42Barcelona-PushSwap-ProChecker)
 
 If you want to run it, type the following command. The number represents the number of arguments push_swap will receive.
 
@@ -93,3 +93,13 @@ If you want to run the viewer with specific arguments use the following command 
 ◦ Email: gemartin@student.42barcelona.com
 
 ◦ Linkedin: https://www.linkedin.com/in/gemartin99/
+
+# Ailopez Contact 📬
+
+### Contact him if you find any errors in the display! It may help future students! 😁
+
+◦ Email: gemartin@student.42barcelona.com
+
+◦ Linkedin: https://www.linkedin.com/in/aitor-lopez-de-audicana-70125b38/
+
+◦ Github: https://github.com/ailopez-o
