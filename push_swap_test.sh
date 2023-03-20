@@ -3293,8 +3293,8 @@ elif [ $N -gt 900 ] || [ $N -eq 900 ] && [ $N -lt 1100 ] && [ $control -eq 2 ]; 
 	media=$(($media+$N))
 	((res_3++))
 elif [ $N -gt 1100 ] || [ $N -eq 1100 ] && [ $N -lt 1300 ] && [ $control -eq 2 ]; then
-	printf "${RED}[KO][2/5]${DEF_COLOR}\n";
-	printf "${CYAN} Moves:$N${DEF_COLOR}";
+	printf "${RED}[KO][2/5]${DEF_COLOR}";
+	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
 	if [ $N -gt $alta ]; then
 		alta=$(($N))
 	fi
