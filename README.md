@@ -77,6 +77,8 @@ If you want to run the viewer with specific arguments use the following command 
 |`8`| exec 'pb'|
 |`ESC ❌`|Close|
 
+Extra acknowledgements for [@nunom4chado](https://github.com/nunom4chado) for implementing a Linux version of the tester.
+
 # I hope you liked and helped! 😁
 
 # Maybe it would interest you!
