@@ -3262,13 +3262,13 @@ if [ $N -gt $alta ]; then
 	if [ $N -lt $baja ]; then
 		baja=$(($N))
 	fi
-media=$(($media+$N))
 if [ $N -gt 700 ] || [ $N -eq 700 ]; then
 	echo TEST $cont ARG:"$ARG" >> traces.txt
 fi
 if [ $N -lt 700 ] && [ $control -eq 2 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
 	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
+  media=$(($media+$N))
 	((res_1++))
 elif [ $N -gt 700 ] || [ $N -eq 700 ] && [ $N -lt 900 ] && [ $control -eq 2 ]; then
 	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
@@ -3390,13 +3390,13 @@ fi
 if [ $N -lt $baja ]; then
 	baja=$(($N))
 fi
-media=$(($media+$N))
 if [ $N -gt 700 ] || [ $N -eq 700 ]; then
 	echo TEST $cont ARG:"$ARG" >> traces.txt
 fi
 if [ $N -lt 5500 ] && [ $control -eq 2 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
 	printf "${CYAN} Moves:$N${DEF_COLOR}\n";
+  media=$(($media+$N))
 	((res_1++))
 elif [ $N -gt 5500 ] || [ $N -eq 5500 ] && [ $N -lt 7000 ] && [ $control -eq 2 ]; then
 	printf "${YELLOW}[OK][4/5]${DEF_COLOR}";
