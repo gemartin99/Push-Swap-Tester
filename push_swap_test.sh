@@ -808,6 +808,63 @@ fi
 rm -rf test_check.txt
 rm -rf 0
 
+ARG="42 a 41"
+./push_swap $ARG > /dev/null 2> test_check.txt
+if [ -s "$FICHERO" ];then
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+    printf "${GREEN}43.[OK] ${DEF_COLOR}\n";
+  else
+    printf "${RED}43.[KO] ${DEF_COLOR}\n";
+    break
+  fi
+done < test_check.txt
+else
+  printf "${RED}43.[KO] ${DEF_COLOR}\n";
+fi
+
+rm -rf test_check.txt
+rm -rf 0
+
+ARG="42 41 40 45 101 x 202 -1 224 3"
+./push_swap $ARG > /dev/null 2> test_check.txt
+if [ -s "$FICHERO" ];then
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+    printf "${GREEN}44.[OK] ${DEF_COLOR}\n";
+  else
+    printf "${RED}44.[KO] ${DEF_COLOR}\n";
+    break
+  fi
+done < test_check.txt
+else
+  printf "${RED}44.[KO] ${DEF_COLOR}\n";
+fi
+
+rm -rf test_check.txt
+rm -rf 0
+
+ARG="42 -2 10 11 0 90 45 500 -200 e"
+./push_swap $ARG > /dev/null 2> test_check.txt
+if [ -s "$FICHERO" ];then
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+    printf "${GREEN}45.[OK] ${DEF_COLOR}\n";
+  else
+    printf "${RED}45.[KO] ${DEF_COLOR}\n";
+    break
+  fi
+done < test_check.txt
+else
+  printf "${RED}45.[KO] ${DEF_COLOR}\n";
+fi
+
+rm -rf test_check.txt
+rm -rf 0
+
 # -=-=-=-=-	Basic -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- #
 
 printf ${BLUE}"\n-------------------------------------------------------------\n"${DEF_COLOR};
