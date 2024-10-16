@@ -39,7 +39,7 @@ if [ -z "$2" ];then
 else
 	n=$2;
 fi
-ARG=$(ruby -e "puts (0..($n)).to_a.shuffle.join(' ')"); ./push_swap $ARG | ./pro_checker $ARG
+ARG=$(seq -250 249 | shuf | tr '\n' ' '); ./push_swap $ARG | ./pro_checker $ARG
 exit 0
 fi
 
@@ -3303,7 +3303,7 @@ fi
 cont=1
 while [ $cont -lt $val ]
 do
-ARG=$(seq -50 49 | shuf | tr '\n' ' ');
+ARG=$(seq 0 99 | shuf | tr '\n' ' ');
 S=$(./push_swap $ARG | ./checker_linux $ARG)
 if [ $S == "OK" ]; then
 	printf "${GREEN}$cont .[OK]${DEF_COLOR}";
@@ -3546,7 +3546,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}1. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3561,7 +3561,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}2. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3576,7 +3576,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}3. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3591,7 +3591,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}4. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3606,7 +3606,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}5. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3621,7 +3621,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}6. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3636,7 +3636,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}7. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3651,7 +3651,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}8. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3666,7 +3666,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}9. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3681,7 +3681,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}10. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3696,7 +3696,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}11. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3711,9 +3711,8 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}12. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
 R=$?
-R=$(echo $?)
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
 else
@@ -3804,7 +3803,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(seq 0 498 | shuf | tr '\n' ' ');
+ARG=$(seq 0 499 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -4259,7 +4258,7 @@ printf ${MAGENTA}"\n------------------------------------------------------------
 printf ${MAGENTA}"\n\t\t\tCONTROL ERRORS\t\n"${DEF_COLOR};
 printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 
-./checker "a" 2> test_check.txt
+./checker "a" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4275,7 +4274,7 @@ else
 fi
 
 
-./checker "111a11" 2> test_check.txt
+./checker "111a11" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4291,7 +4290,7 @@ else
 fi
 
 
-./checker "hello world" 2> test_check.txt
+./checker "hello world" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4307,7 +4306,7 @@ else
 fi
 
 
-./checker "" 2> test_check.txt
+./checker "" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4322,7 +4321,7 @@ else
 	printf "${RED}4.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "0 0" 2> test_check.txt
+./checker "0 0" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4337,7 +4336,7 @@ else
 	printf "${RED}5.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "111-1 2 -3" 2> test_check.txt
+./checker "111-1 2 -3" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4352,7 +4351,7 @@ else
 	printf "${RED}7.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "-3 -2 -2" 2> test_check.txt
+./checker "-3 -2 -2" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4367,7 +4366,7 @@ else
 	printf "${RED}8.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "\n" 2> test_check.txt
+./checker "\n" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4382,7 +4381,7 @@ else
 	printf "${RED}9.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "-2147483649" 2> test_check.txt
+./checker "-2147483649" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4397,7 +4396,7 @@ else
 	printf "${RED}10.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "-2147483650" 2> test_check.txt
+./checker "-2147483650" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4412,7 +4411,7 @@ else
 	printf "${RED}11.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "2147483648" 2> test_check.txt
+./checker "2147483648" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4427,7 +4426,7 @@ else
 	printf "${RED}12.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "8 "9 1" 12" 2> test_check.txt
+./checker "8 "9 1" 12" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4442,7 +4441,7 @@ else
 	printf "${RED}13.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "10 -1 -2 -3 -4 -5 -6 90 99 10" 2> test_check.txt
+./checker "10 -1 -2 -3 -4 -5 -6 90 99 10" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4457,7 +4456,7 @@ else
 	printf "${RED}14.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "1 +1 -1" 2> test_check.txt
+./checker "1 +1 -1" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4472,7 +4471,7 @@ else
 	printf "${RED}15.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "3333-3333 1 4" 2> test_check.txt
+./checker "3333-3333 1 4" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4487,7 +4486,7 @@ else
 	printf "${RED}16.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "111a111 -4 3" 2> test_check.txt
+./checker "111a111 -4 3" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4502,7 +4501,7 @@ else
 	printf "${RED}17.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "111111 "-4 3"" 2> test_check.txt
+./checker "111111 "-4 3"" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4517,7 +4516,7 @@ else
 	printf "${RED}18.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "2147483649" 2> test_check.txt
+./checker "2147483649" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4532,7 +4531,7 @@ else
 	printf "${RED}19.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "2147483647+1" 2> test_check.txt
+./checker "2147483647+1" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4547,7 +4546,7 @@ else
 	printf "${RED}20.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "0 1 2 3 4 5 0" 2> test_check.txt
+./checker "0 1 2 3 4 5 0" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4562,7 +4561,7 @@ else
 	printf "${RED}21.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "3 +3" 2> test_check.txt
+./checker "3 +3" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4577,7 +4576,7 @@ else
 	printf "${RED}22.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "3+3" 2> test_check.txt
+./checker "3+3" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4592,7 +4591,7 @@ else
 	printf "${RED}23.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "42 42" 2> test_check.txt
+./checker "42 42" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4607,7 +4606,7 @@ else
 	printf "${RED}24.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "42 " -42" " 2> test_check.txt
+./checker "42 " -42" " 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4622,7 +4621,7 @@ else
 	printf "${RED}25.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "4222-4222" 2> test_check.txt
+./checker "4222-4222" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4637,7 +4636,7 @@ else
 	printf "${RED}26.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "99999999999999999999999999" 2> test_check.txt
+./checker "99999999999999999999999999" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4652,7 +4651,7 @@ else
 	printf "${RED}27.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "-99999999999999999999999999" 2> test_check.txt
+./checker "-99999999999999999999999999" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4667,7 +4666,7 @@ else
 	printf "${RED}28.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "0 -0 1 -1" 2> test_check.txt
+./checker "0 -0 1 -1" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4682,7 +4681,7 @@ else
 	printf "${RED}29.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "0 +0 1 -1" 2> test_check.txt
+./checker "0 +0 1 -1" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4697,7 +4696,7 @@ else
 	printf "${RED}30.[KO] ${DEF_COLOR}\n";
 fi
 
-./checker "111+111 -4 3" 2> test_check.txt
+./checker "111+111 -4 3" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4714,7 +4713,7 @@ fi
 
 rm -rf test_check.txt
 
-./checker "-" 2> test_check.txt
+./checker "-" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4731,7 +4730,7 @@ fi
 
 rm -rf test_check.txt
 
-./checker "+" 2> test_check.txt
+./checker "+" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4746,7 +4745,7 @@ else
 	printf "${RED}33.[KO] ${DEF_COLOR}\n";
 fi
 
-./push_swap "--123 1 321" 2> test_check.txt
+./checker "--123 1 321" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4763,7 +4762,7 @@ fi
 
 rm -rf test_check.txt
 
-./push_swap "++123 1 321" 2> test_check.txt
+./checker "++123 1 321" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4780,7 +4779,7 @@ fi
 
 rm -rf test_check.txt
 
-./push_swap "09 9 3 -1" 2> test_check.txt
+./checker "09 9 3 -1" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4797,7 +4796,7 @@ fi
 
 rm -rf test_check.txt
 
-./push_swap "00000001 1 9 3" 2> test_check.txt
+./checker "00000001 1 9 3" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4814,7 +4813,7 @@ fi
 
 rm -rf test_check.txt
 
-./push_swap "-5 00000003 003 9 1" 2> test_check.txt
+./checker "-5 00000003 003 9 1" 2> test_check.txt > /dev/null
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -4831,36 +4830,169 @@ fi
 
 rm -rf test_check.txt
 
+echo -e "saa" | ./checker "1" 2> test_check.txt > /dev/null
+if [ -s "$FICHERO" ];then
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+    printf "${GREEN}39.[OK] ${DEF_COLOR}\n";
+  else
+    printf "${RED}39.[KO] ${DEF_COLOR}\n";
+    break
+  fi
+done < test_check.txt
+else
+  printf "${RED}39.[KO] ${DEF_COLOR}\n";
+fi
+
+rm -rf test_check.txt
+
+echo -e "sa\n" | ./checker "1" 2> test_check.txt > /dev/null
+if [ -s "$FICHERO" ];then
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+    printf "${GREEN}40.[OK] ${DEF_COLOR}\n";
+  else
+    printf "${RED}40.[KO] ${DEF_COLOR}\n";
+    break
+  fi
+done < test_check.txt
+else
+  printf "${RED}40.[KO] ${DEF_COLOR}\n";
+fi
+
+rm -rf test_check.txt
+
+echo -e "SA" | ./checker "1" 2> test_check.txt > /dev/null
+if [ -s "$FICHERO" ];then
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+    printf "${GREEN}41.[OK] ${DEF_COLOR}\n";
+  else
+    printf "${RED}41.[KO] ${DEF_COLOR}\n";
+    break
+  fi
+done < test_check.txt
+else
+  printf "${RED}41.[KO] ${DEF_COLOR}\n";
+fi
+
+rm -rf test_check.txt
+
+echo -e "sa " | ./checker "1" 2> test_check.txt > /dev/null
+if [ -s "$FICHERO" ];then
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+    printf "${GREEN}42.[OK] ${DEF_COLOR}\n";
+  else
+    printf "${RED}42.[KO] ${DEF_COLOR}\n";
+    break
+  fi
+done < test_check.txt
+else
+  printf "${RED}42.[KO] ${DEF_COLOR}\n";
+fi
+
+rm -rf test_check.txt
+
+echo -e "" | ./checker "1" 2> test_check.txt > /dev/null
+if [ -s "$FICHERO" ];then
+while IFS= read -r line
+do
+  if [[ $line == "Error" ]]; then
+    printf "${GREEN}43.[OK] ${DEF_COLOR}\n";
+  else
+    printf "${RED}43.[KO] ${DEF_COLOR}\n";
+    break
+  fi
+done < test_check.txt
+else
+  printf "${RED}43.[KO] ${DEF_COLOR}\n";
+fi
+
+rm -rf test_check.txt
+
+
 # Checkear nombres de funciones diferentes
 printf ${MAGENTA}"\n-------------------------------------------------------------\n"${DEF_COLOR};
 printf ${MAGENTA}"\n\t\t\tCheck operations\t\t\n"${DEF_COLOR};
 printf ${MAGENTA}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 
+#pruebas SA
 ARG="2 1 3";
 S=$(echo -e "sa" | ./checker_linux $ARG)
 R=$(echo -e "sa" | ./checker $ARG)
 if [ $S == $R ]; then
-	printf "${GREEN}SA 1.[OK] ${DEF_COLOR}\n";
+	printf "${GREEN}1.[OK] ${DEF_COLOR}\n";
 else
-	printf "${RED}1.[KO]${DEF_COLOR}\n";
+	printf "${RED}1.[KO] ${DEF_COLOR}\n";
 fi
 
-ARG="2 1 3";
-S=$(echo -e "sa\nsa\nsa" | ./checker_linux $ARG)
-R=$(echo -e "sa\nsa\nsa" | ./checker $ARG)
+#pruebas SB
+ARG="2 1 3 4";
+S=$(echo -e "pb\npb\nsb\npa\npa" | ./checker_linux $ARG)
+R=$(echo -e "pb\npb\nsb\npa\npa" | ./checker $ARG)
 if [ $S == $R ]; then
-	printf "${GREEN}2.[OK] ${DEF_COLOR}\n";
+  printf "${GREEN}2.[OK] ${DEF_COLOR}\n";
 else
-	printf "${RED}2.[KO]${DEF_COLOR}\n";
+  printf "${RED}2.[KO] ${DEF_COLOR}\n";
 fi
 
-ARG="2 1 3";
-S=$(echo -e "sa\nsa" | ./checker_linux $ARG)
-R=$(echo -e "sa\nsa" | ./checker $ARG)
+#pruebas SS
+ARG="2 1 4 3";
+S=$(echo -e "pb\npb\nss\npa\npa" | ./checker_linux $ARG)
+R=$(echo -e "pb\npb\nss\npa\npa" | ./checker $ARG)
+L=$(echo -e "pb\npb\nss\npa\npa" | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
+L=$?
 if [ $S == $R ]; then
-	printf "${GREEN}2.[OK] ${DEF_COLOR}\n";
+  printf "${GREEN}3.[OK] ${DEF_COLOR}";
 else
-	printf "${RED}2.[KO]${DEF_COLOR}\n";
+  printf "${RED}3.[KO]${DEF_COLOR}";
+fi
+if [[ $L == 0 ]]; then
+  printf "${GREEN}[MEMORY OK] ${DEF_COLOR}\n";
+else
+  printf "${RED}[KO LEAKS] ${DEF_COLOR}\n";
+fi
+
+#pruebas RA
+ARG="2 1";
+S=$(echo -e "ra" | ./checker_linux $ARG)
+R=$(echo -e "ra" | ./checker $ARG)
+if [ $S == $R ]; then
+  printf "${GREEN}4.[OK] ${DEF_COLOR}\n";
+else
+  printf "${RED}4.[KO] ${DEF_COLOR}\n";
+fi
+
+#pruebas RA
+ARG="100 101 1 2 3 4 5 6 7 8 9 10 11 12 13 14";
+S=$(echo -e "ra\nra" | ./checker_linux $ARG)
+R=$(echo -e "ra\nra" | ./checker $ARG)
+if [ $S == $R ]; then
+  printf "${GREEN}5.[OK] ${DEF_COLOR}\n";
+else
+  printf "${RED}5.[KO] ${DEF_COLOR}\n";
+fi
+
+#pruebas de todo
+ARG="1";
+S=$(echo -e "sa\nsb\nss\npa\npb\npa\npb\nsb\npa\nra\nrb\nrr\nrra\nrrb\nrrr" | ./checker_linux $ARG)
+R=$(echo -e "sa\nsb\nss\npa\npb\npa\npb\nsb\npa\nra\nrb\nrr\nrra\nrrb\nrrr" | ./checker $ARG)
+L=$(echo -e "sa\nsb\nss\npa\npb\npa\npb\nsb\npa\nra\nrb\nrr\nrra\nrrb\nrrr" | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
+L=$?
+if [ $S == $R ]; then
+  printf "${GREEN}6.[OK] ${DEF_COLOR}";
+else
+  printf "${RED}6.[KO] ${DEF_COLOR}";
+fi
+if [[ $L == 0 ]]; then
+  printf "${GREEN}[MEMORY OK] ${DEF_COLOR}\n";
+else 
+  printf "${RED}[KO LEAKS] ${DEF_COLOR}\n";
 fi
 
 printf ${MAGENTA}"\n-------------------------------------------------------------\n"${DEF_COLOR};
