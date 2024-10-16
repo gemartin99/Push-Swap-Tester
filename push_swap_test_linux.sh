@@ -3303,7 +3303,7 @@ fi
 cont=1
 while [ $cont -lt $val ]
 do
-ARG=$(ruby -e "puts (00..99).to_a.shuffle.join(' ')");
+ARG=$(seq -50 49 | shuf | tr '\n' ' ');
 S=$(./push_swap $ARG | ./checker_linux $ARG)
 if [ $S == "OK" ]; then
 	printf "${GREEN}$cont .[OK]${DEF_COLOR}";
@@ -3431,7 +3431,7 @@ fi
 cont=1
 while [ $cont -lt $val ]
 do
-ARG=$(ruby -e "puts (-250..249).to_a.shuffle.join(' ')");
+ARG=$(seq -250 249 | shuf | tr '\n' ' ');
 S=$(./push_swap $ARG | ./checker_linux $ARG)
 if [ $S == "OK" ]; then
 	printf "${GREEN}$cont .[OK]${DEF_COLOR}";
@@ -3546,8 +3546,9 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}1. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --log-fd=1 ./push_swap $ARG | grep -Ec 'no leaks are possible|ERROR SUMMARY: 0')
-if [[ $R == 2 ]]; then
+R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$?
+if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
 else
   printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
@@ -3560,8 +3561,9 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}2. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --log-fd=1 ./push_swap $ARG | grep -Ec 'no leaks are possible|ERROR SUMMARY: 0')
-if [[ $R == 2 ]]; then
+R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$?
+if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
 else
   printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
@@ -3574,8 +3576,9 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}3. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --log-fd=1 ./push_swap $ARG | grep -Ec 'no leaks are possible|ERROR SUMMARY: 0')
-if [[ $R == 2 ]]; then
+R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$?
+if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
 else
   printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
@@ -3588,8 +3591,9 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}4. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --log-fd=1 ./push_swap $ARG | grep -Ec 'no leaks are possible|ERROR SUMMARY: 0')
-if [[ $R == 2 ]]; then
+R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$?
+if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
 else
   printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
@@ -3602,8 +3606,9 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}5. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --log-fd=1 ./push_swap $ARG | grep -Ec 'no leaks are possible|ERROR SUMMARY: 0')
-if [[ $R == 2 ]]; then
+R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$?
+if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
 else
   printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
@@ -3616,8 +3621,9 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}6. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --log-fd=1 ./push_swap $ARG | grep -Ec 'no leaks are possible|ERROR SUMMARY: 0')
-if [[ $R == 2 ]]; then
+R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$?
+if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
 else
   printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
@@ -3630,8 +3636,9 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}7. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --log-fd=1 ./push_swap $ARG | grep -Ec 'no leaks are possible|ERROR SUMMARY: 0')
-if [[ $R == 2 ]]; then
+R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$?
+if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
 else
   printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
@@ -3644,8 +3651,9 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}8. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --log-fd=1 ./push_swap $ARG | grep -Ec 'no leaks are possible|ERROR SUMMARY: 0')
-if [[ $R == 2 ]]; then
+R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$?
+if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
 else
   printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
@@ -3658,8 +3666,9 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}9. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --log-fd=1 ./push_swap $ARG | grep -Ec 'no leaks are possible|ERROR SUMMARY: 0')
-if [[ $R == 2 ]]; then
+R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$?
+if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
 else
   printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
@@ -3672,8 +3681,9 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}10. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --log-fd=1 ./push_swap $ARG | grep -Ec 'no leaks are possible|ERROR SUMMARY: 0')
-if [[ $R == 2 ]]; then
+R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$?
+if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
 else
   printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
@@ -3686,8 +3696,9 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}11. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --log-fd=1 ./push_swap $ARG | grep -Ec 'no leaks are possible|ERROR SUMMARY: 0')
-if [[ $R == 2 ]]; then
+R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$?
+if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
 else
   printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
@@ -3700,8 +3711,10 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}12. [KO]${DEF_COLOR}";
 fi
-R=$(valgrind --log-fd=1 ./push_swap $ARG | grep -Ec 'no leaks are possible|ERROR SUMMARY: 0')
-if [[ $R == 2 ]]; then
+R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$?
+R=$(echo $?)
+if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
 else
   printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
@@ -3711,7 +3724,7 @@ printf ${BLUE}"\n-------------------------------------------------------------\n
 printf ${BLUE}"\n\t\t  Random test with big nums\t\t\n"${DEF_COLOR};
 printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 
-ARG=$(ruby -e "puts (-2147483648..-2147483149).to_a.shuffle.join(' ')");
+ARG=$(seq -2147483648 -2147483149 | shuf | tr '\n' ' ')
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -3731,7 +3744,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (-2147483648..-2147483149).to_a.shuffle.join(' ')");
+ARG=$(seq -2147483648 -2147483149 | shuf | tr '\n' ' ')
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -3751,7 +3764,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (0..499).to_a.shuffle.join(' ')");
+ARG=$(seq 0 499 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -3771,7 +3784,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (0..499).to_a.shuffle.join(' ')");
+ARG=$(seq 0 499 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -3791,7 +3804,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (0..498).to_a.shuffle.join(' ')");
+ARG=$(seq 0 498 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -3811,7 +3824,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (0..498).to_a.shuffle.join(' ')");
+ARG=$(seq 0 498 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -3831,7 +3844,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (0..497).to_a.shuffle.join(' ')");
+ARG=$(seq 0 497 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -3851,7 +3864,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (0..497).to_a.shuffle.join(' ')");
+ARG=$(seq 0 497 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -3871,7 +3884,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (-1..498).to_a.shuffle.join(' ')");
+ARG=$(seq -1 498 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -3891,7 +3904,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (5000..5499).to_a.shuffle.join(' ')");
+ARG=$(seq 5000 5499 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -3911,7 +3924,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (50000..50499).to_a.shuffle.join(' ')");
+ARG=$(seq 50000 50499 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -3931,7 +3944,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (500000..500499).to_a.shuffle.join(' ')");
+ARG=$(seq 50000 50499 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -3951,7 +3964,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (5000000..5000499).to_a.shuffle.join(' ')");
+ARG=$(seq 500000 500499 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -3971,7 +3984,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (50000000..50000499).to_a.shuffle.join(' ')");
+ARG=$(seq 5000000 5000499 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -3991,7 +4004,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (500000000..500000499).to_a.shuffle.join(' ')");
+ARG=$(seq 50000000 50000499 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -4011,7 +4024,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (0..450).to_a.shuffle.join(' ')");
+ARG=$(seq 0 450 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -4031,7 +4044,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (250..720).to_a.shuffle.join(' ')");
+ARG=$(seq 250 720 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -4051,7 +4064,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (10000..10460).to_a.shuffle.join(' ')");
+ARG=$(seq 10000 10479 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -4071,7 +4084,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (100..250).to_a.shuffle.join(' ')");
+ARG=$(seq 100 450 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -4091,7 +4104,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (90000..90460).to_a.shuffle.join(' ')");
+ARG=$(seq -500 -50 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -4111,7 +4124,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (-500..-9).to_a.shuffle.join(' ')");
+ARG=$(seq -500 -9 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -4131,7 +4144,7 @@ else
 	printf "${RED} [KO]${DEF_COLOR}\n";
 fi
 
-ARG=$(ruby -e "puts (-50000..-49510).to_a.shuffle.join(' ')");
+ARG=$(seq 100 599 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 if [ $N -lt 5500 ]; then
 	printf "${GREEN}[OK][5/5]${DEF_COLOR}";
@@ -4174,7 +4187,7 @@ do
 cont=1
 while [ $cont -lt 6 ]
 do
-ARG=$(ruby -e "puts (00..($cont2)).to_a.shuffle.join(' ')");
+ARG=$(seq 0 $cont2 | shuf | tr '\n' ' ');
 N=$(./push_swap $ARG | wc -l)
 S=$(./push_swap $ARG | ./checker_linux $ARG)
 if [ $S == "OK" ]; then
@@ -4191,9 +4204,10 @@ else
 fi
 if [ $cont -eq 5 ]; then
 
-R=$(valgrind --log-fd=1 ./push_swap $ARG | grep -Ec 'no leaks are possible|ERROR SUMMARY: 0')
+R=$(valgrind --leak-check=full ./push_swap $ARG > /dev/null 2>&1)
+R=$?
 ((cont4++))
-if [[ $R == 2 ]]; then
+if [[ $R == 0 ]]; then
   printf "${GREEN}$cont3 [MEMORY OK] ${DEF_COLOR}\n";
   ((res_3++))
 else
@@ -5058,7 +5072,7 @@ res_2=0
 cont=1
 while [ $cont -lt $val ]
 do
-ARG=$(ruby -e "puts (00..99).to_a.shuffle.join(' ')");
+ARG=$(seq 0 99 | shuf | tr '\n' ' ')
 S=$(./push_swap $ARG | ./checker_linux $ARG)
 R=$(./push_swap $ARG | ./checker $ARG)
 if [ $S == $R ] && [ $R == "OK" ]; then
@@ -5105,7 +5119,7 @@ res_2=0
 cont=1
 while [ $cont -lt $val ]
 do
-ARG=$(ruby -e "puts (00..499).to_a.shuffle.join(' ')");
+ARG=$(seq 0 499 | shuf | tr '\n' ' ');
 S=$(./push_swap $ARG | ./checker_linux $ARG)
 R=$(./push_swap $ARG | ./checker $ARG)
 if [ $S == $R ] && [ $R == "OK" ]; then
@@ -5148,7 +5162,7 @@ cont=1
 var=0
 while [ $cont -lt $val ] && [ $var -lt 500 ]
 do
-ARG=$(ruby -e "puts (00..$var).to_a.shuffle.join(' ')");
+ARG=$(seq 0 $var | shuf | tr '\n' ' ');
 var=$(($var + 1))
 S=$(./push_swap $ARG | ./checker_linux $ARG)
 R=$(./push_swap $ARG | ./checker $ARG)
@@ -5160,8 +5174,9 @@ else
 	echo TEST $cont ARG:"$ARG" >> traces.txt
  	((res_2++))
 fi
-R=$(./push_swap $ARG | valgrind --log-fd=1 ./checker $ARG | grep -Ec 'no leaks are possible|ERROR SUMMARY: 0')
-if [[ $R == 2 ]]; then
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
+R=$?
+if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}";
 else
   printf "${RED} [KO LEAKS] ${DEF_COLOR}";
@@ -5172,7 +5187,7 @@ done
 
 while [ $var -lt 1000 ]
 do
-ARG=$(ruby -e "puts (00..$var).to_a.shuffle.join(' ')");
+ARG=$(seq 0 $var | shuf | tr '\n' ' ');
 var=$(($var + 25))
 S=$(./push_swap $ARG | ./checker_linux $ARG)
 R=$(./push_swap $ARG | ./checker $ARG)
@@ -5184,8 +5199,9 @@ else
 	echo TEST $cont ARG:"$ARG" >> traces.txt
  	((res_2++))
 fi
-R=$(./push_swap $ARG | valgrind --log-fd=1 ./checker $ARG | grep -Ec 'no leaks are possible|ERROR SUMMARY: 0')
-if [[ $R == 2 ]]; then
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
+R=$?
+if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}";
 else
   printf "${RED} [KO LEAKS] ${DEF_COLOR}";
