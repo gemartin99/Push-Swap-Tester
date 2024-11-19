@@ -3546,7 +3546,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}1. [KO]${DEF_COLOR}";
 fi
-R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker_linux $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3561,7 +3561,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}2. [KO]${DEF_COLOR}";
 fi
-R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker_linux $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3576,7 +3576,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}3. [KO]${DEF_COLOR}";
 fi
-R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker_linux $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3591,7 +3591,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}4. [KO]${DEF_COLOR}";
 fi
-R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker_linux $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3606,7 +3606,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}5. [KO]${DEF_COLOR}";
 fi
-R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker_linux $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3621,7 +3621,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}6. [KO]${DEF_COLOR}";
 fi
-R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker_linux $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3636,7 +3636,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}7. [KO]${DEF_COLOR}";
 fi
-R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker_linux $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3651,7 +3651,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}8. [KO]${DEF_COLOR}";
 fi
-R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker_linux $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3666,7 +3666,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}9. [KO]${DEF_COLOR}";
 fi
-R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker_linux $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3681,7 +3681,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}10. [KO]${DEF_COLOR}";
 fi
-R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker_linux $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
@@ -3696,7 +3696,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}11. [KO]${DEF_COLOR}";
 fi
-R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker_linux $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
