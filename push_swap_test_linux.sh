@@ -3711,7 +3711,7 @@ if [ $N -eq 0 ]; then
 else
 	printf "${RED}12. [KO]${DEF_COLOR}";
 fi
-R=$(./push_swap $ARG | valgrind --leak-check=full ./checker $ARG > /dev/null 2>&1)
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker_linux $ARG > /dev/null 2>&1)
 R=$?
 if [[ $R == 0 ]]; then
   printf "${GREEN}[MOK] ${DEF_COLOR}\n";
